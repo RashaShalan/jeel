@@ -8,7 +8,7 @@
                 <a href="#" class="menu-icon mx-2"><svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                         <path class="heroicon-ui" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
                     </svg></a>
-                <a href="">
+                <a href="{{url(app()->getLocale().'/')}}">
                     <img src="{{ asset('front-assets/images/logo.svg')}}" alt="">
                 </a>
             </div>
@@ -19,12 +19,12 @@
                     </svg>
                 </div>
                 <ul>
-                    <li><a href="">  {{ __('site.About_jeel') }}  </a></li>
-                    <li><a href="">{{ __('site.download') }} </a></li>
-                    <li><a href="">{{ __('site.faq_questions') }}</a></li>
-                    <li><a href=""> {{ __('site.jeel_questions') }}</a></li>
-                    <li><a href=""> {{ __('site.blog') }}</a></li>
-                    <li><a href=""> {{ __('site.contact_us') }}</a></li>
+                    <li><a href="{{url(app()->getLocale().'/Aboutus')}}">  {{ __('site.About_jeel') }}  </a></li>
+                    <li><a href="{{url(app()->getLocale().'/Download')}}">{{ __('site.download') }} </a></li>
+                    <li><a href="{{url(app()->getLocale().'/FAQS')}}">{{ __('site.faq_questions') }}</a></li>
+                    <li><a href="{{url(app()->getLocale().'/Jeel-questions')}}"> {{ __('site.jeel_questions') }}</a></li>
+                    <li><a href="javascript:void(0)"> {{ __('site.blog') }}</a></li>
+                    <li><a href="{{url(app()->getLocale().'/Contact-us')}}"> {{ __('site.contact_us') }}</a></li>
                 </ul>
             </div>
             <div class="sub-lang">

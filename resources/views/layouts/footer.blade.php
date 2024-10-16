@@ -8,18 +8,18 @@
               </div>
               <ul class="pages-links">
                   <li>
-                      <a href="javascript:;">
-                          من نحن
+                      <a href="{{url(app()->getLocale().'/Aboutus')}}">
+                        {{ __('site.About_jeel') }}
                       </a>
                   </li>
                   <li>
-                      <a href="javascript:;">
-                          تواصل معنا
+                      <a href="{{url(app()->getLocale().'/Contact-us')}}">
+                        {{ __('site.contact_us') }}
                       </a>
                   </li>
                   <li>
-                      <a href="javascript:;">
-                          الاسئلة الشائعة
+                      <a href="{{url(app()->getLocale().'/FAQS')}}">
+                        {{ __('site.faq_questions') }}
                       </a>
                   </li>
               </ul>

@@ -11,4 +11,28 @@ class HomeController extends Controller
   {
     return view('homepage');
   }
+
+  public function about()
+  {
+    return view('about');
+  }
+  public function download_app()
+  {
+    return view('download_app');
+  }
+
+  public function faq_question()
+  {
+    return view('faqs');
+  }
+
+  public function questions()
+  {
+    return view('jeel_question');
+  }
+
+  public function contact_us()
+  {
+    return view('contact');
+  }
 }

@@ -1,5 +1,6 @@
 @extends('layouts/main' )
 
+@section('title')Home page | @endsection
 
 @section('content')
 
@@ -14,7 +15,7 @@
                       <div class="overlay">
                           <img src="{{ asset('front-assets/images/overlaycover1.svg')}}">
                       </div>
-                      <img src="{{ asset('front-assets/images/cover1.jpg')}}" alt="img-slide">
+                      <img src="{{ asset('front-assets/images/cover1.jpg')}}" alt="img-slide1">
                       <div class="wrap-slide">
                           <div class="container-xl">
                               <div class="left-section">
@@ -34,7 +35,7 @@
                       </div>
                   </div>
                   <div class="slide">
-                      <img src="{{ asset('front-assets/images/cover2.jpg')}}" alt="img-slide">
+                      <img src="{{ asset('front-assets/images/cover2.png')}}" alt="img-slide2">
                       <div class="wrap-slide">
                           <div class="container-xl">
                               <div class="left-section">
@@ -54,7 +55,7 @@
                       </div>
                   </div>
                   <div class="slide">
-                      <img src="{{ asset('front-assets/images/cover3.jpg')}}" alt="img-slide">
+                      <img src="{{ asset('front-assets/images/cover3.jpg')}}" alt="img-slide3">
                       <div class="wrap-slide">
                           <div class="container-xl">
                               <div class="left-section">
@@ -99,20 +100,17 @@
                       </div>
                       <div class="col-md-5 px-0">
                           <div class="title__section">
-                              <div class="subhead text-primarydark mb-2"><span> من نحن </span></div>
-                              <div class="head text-primary"> ما هو تطبيق جيل </div>
+                              <div class="subhead text-primarydark mb-2"><span>  {{__('site.About_us')}} </span></div>
+                              <div class="head text-primary">{{__('site.WhatJeelApp')}}</div>
                           </div>
                           <div class="main-text">
                               <p>
-                                  هو تطبيق يقدم محتوى من محدد عربي القيم الأخلاقية وقد تم تصميم
-                                  المحتوى خصيصا لتطبيق جيل دو اقتبـاس أو نسخ وفقا لمنظومة
-                                  تربوية، تم مراجعتها على يد خبراء تربو لإكساب الطفل القيم
-                                  السليمة مع تعزيز اللغة العربية لديهم.
+                                 {{__('site.WhatJeelAnswer')}}.
                               </p>
                           </div>
                           <div class="btns-action">
-                              <button class="btn btn-primary">حمل التطبيق</button>
-                              <button class="btn btn-outlineprimary mx-3">انجازات جيل</button>
+                              <button class="btn btn-primary"> {{__('site.download_app')}}</button>
+                              <button class="btn btn-outlineprimary mx-3">{{__('site.Achievement')}} </button>
                           </div>
                       </div>
                   </div>
@@ -123,9 +121,8 @@
           <section class="clients-section mb-section py-section">
               <div class="container-xl">
                   <div class="title__section text-center">
-                      <div class="subhead text-primarydark mb-2"><span> الشراكات </span></div>
-                      <div class="head text-blacklight">
-                          يثق فى جـيل
+                      <div class="subhead text-primarydark mb-2"><span> {{__('site.Partnerships')}} </span></div>
+                      <div class="head text-blacklight">{{__('site.TrustJeel')}}
                       </div>
                   </div>
                   <div class="content__section">
@@ -158,24 +155,22 @@
               <div class="container-xl">
                   <div class="row">
                       <div class="title__section text-center">
-                          <div class="subhead mb-2"><span> انجازات جيل </span></div>
+                          <div class="subhead mb-2"><span> {{__('site.Achievement')}}</span></div>
                           <div class="head text-primary">
-                              انجازات جيل
+                            {{__('site.Achievement')}}
                           </div>
 
                       </div>
                       <div class="main-text">
                           <p class="col-md-9 mx-auto">
-                              يتمتع تطبيق جيل بجميع المقومات التي تجعله منصة تعليمية ناجحة مع استمرار التطوير
-                              والابتكار، وتشير الإحصائيات إلى أنّه
-                              يمضي بخطى ثابتة نحو أن يصبح منصة تعليمية رائدة للأطفال في العالم العربي.
+                            {{__('site.achive_text')}}
                           </p>
                       </div>
                   </div>
 
 
                   <div class="content__section sm-template">
-                      <div class="head text-white text-center mb-4"> ما حققناه فى جيل </div>
+                      <div class="head text-white text-center mb-4"> {{__('site.jeel_achieve')}}</div>
 
                       <div class="d-flex flex-wrap justify-content-between align-items-center">
                           <div class="stats-item">
@@ -184,7 +179,7 @@
                               </div>
                               <div class="desc-stats text-center">
                                   <span class="num-stats">+2M</span>
-                                  <span>عمليــة تحميل</span>
+                                  <span>{{__('site.download_process')}}</span>
                               </div>
 
                           </div>
@@ -194,7 +189,7 @@
                               </div>
                               <div class="desc-stats text-center">
                                   <span class="num-stats"> +57 </span>
-                                  <span> دولة بها مستخدمين </span>
+                                  <span>{{__('site.country_with_users')}}</span>
                               </div>
 
                           </div>
@@ -204,7 +199,7 @@
                               </div>
                               <div class="desc-stats text-center">
                                   <span class="num-stats">+300K</span>
-                                  <span> اشتراك في التطبيق </span>
+                                  <span> {{__('site.subscribe_of_app')}}</span>
                               </div>
 
                           </div>
@@ -214,7 +209,7 @@
                               </div>
                               <div class="desc-stats text-center">
                                   <span class="num-stats"> +500 </span>
-                                  <span> حلقة للمشاهدة </span>
+                                  <span>{{__('site.episode_to_watch')}} </span>
                               </div>
 
                           </div>
@@ -224,17 +219,17 @@
                               </div>
                               <div class="desc-stats text-center">
                                   <span class="num-stats"> +1000 </span>
-                                  <span> شخصية حصرية </span>
+                                  <span>{{__('site.exclusive_character')}}</span>
                               </div>
 
                           </div>
                           <div class="stats-item">
                               <div class="ico-stats text-center">
-                                  <img src="{{ asset('front-assets/images/stats/Start-icon.svg')}}" alt="">
+                                  <img src="{{ asset('front-assets/images/stats/Star-icon.svg')}}" alt="">
                               </div>
                               <div class="desc-stats text-center">
                                   <span class="num-stats"> +10 </span>
-                                  <span> سنوات من الإعداد والخبرة </span>
+                                  <span>{{__('site.years_of_experience')}}</span>
                               </div>
 
                           </div>
@@ -257,7 +252,7 @@
                               <img src="{{ asset('front-assets/images/companies/huaw-logo.svg')}}" alt="">
 
                           </div>
-                          <p>تم اختيار تطبيق جيل كواحد من أفضل IO شركات ناشئة على مستوى شمال أفريقيا</p>
+                          <p>{{__('site.best_10')}}</p>
                       </div>
 
                   </div>
@@ -269,8 +264,7 @@
 
                           </div>
                           <p>
-                              اختيار مؤسسة IQ Holon تطبـيق جيل بين أكثر 50 شركة واعدة في مجال المحتوي وتقنيات التعلم
-                              لأعوام 2021 - 2022 - 2023 على التوالي
+                              {{__('site.IQ_holon')}}
                           </p>
                       </div>
 
@@ -282,7 +276,7 @@
                               <img src="{{ asset('front-assets/images/companies/takeoff-logo.svg')}}" alt="">
 
                           </div>
-                          <p>التأهل بين 30 شركة ناشئة للمراحل النهائية من مسابقة 2021 istanbul Off Take</p>
+                          <p>{{__('site.istanbul_take_off')}}</p>
                       </div>
 
                   </div>
@@ -293,7 +287,7 @@
                               <img src="{{ asset('front-assets/images/companies/kiw-logo.svg')}}" alt="">
 
                           </div>
-                          <p>المشاركة في عدة فعاليات للشركات الناشئة نظمتها مؤسسة KiwiTech تلبية لدعوة المؤسسة</p>
+                          <p>{{__('site.Kiwitik_participate')}}</p></p>
                       </div>
 
                   </div>
@@ -304,8 +298,7 @@
                               <img src="{{ asset('front-assets/images/companies/tech-logo.svg')}}" alt="">
 
                           </div>
-                          <p> المشاركة بمؤتمر Techne summit في دورته لعام2022 ومناقشة دور التطبيقات التعليمية على
-                              الجيل الحالي</p>
+                          <p>{{__('site.Techne_summit')}}</p>
                       </div>
 
                   </div>
@@ -316,8 +309,7 @@
                               <img src="{{ asset('front-assets/images/companies//esc-logo.svg')}}" alt="">
 
                           </div>
-                          <p> جائزة الإسكوا لمحتوى الرقمي العربي لعام 2022 أفضل تطبيق عربي للأطفال في مجال التعليم
-                              الجيد</p>
+                          <p> {{__('site.escew_prize')}}</p>
                       </div>
 
                   </div>
@@ -332,18 +324,14 @@
               <div class="row flex-column-reverse flex-md-row">
                   <div class="col-md-6">
                       <div class="title__section">
-                          <div class="subhead text-primarydark mb-2"><span> المميزات </span></div>
+                          <div class="subhead text-primarydark mb-2"><span> {{__('site.features')}} </span></div>
                           <div class="head text-blacklight">
-                              انجازات جيل
+                               {{__('site.Achievement')}}
                           </div>
 
                       </div>
                       <div class="main-text">
-                          <p>
-                              للطفل حسابه المستقل في جيل؛ سيجد فيه كافة أنواع المحتـــــــوى <br>التي يبحث
-                              عنهـــا وما
-                              هو
-                              أكـــثر في 6 أقســـــــام:
+                          <p>{{__('site.child_independent_account')}}
                           </p>
                       </div>
 
@@ -351,42 +339,42 @@
                           <div class="feature-item">
                               <i>
                                   <img src="{{ asset('front-assets/images/kidsfeature/seriesicon.svg')}}">
-                              </i> مسلسلات جيل
+                              </i>  {{__('site.feautre1')}}
 
 
                           </div>
                           <div class="feature-item">
                               <i>
                                   <img src="{{ asset('front-assets/images/kidsfeature/readicon.svg')}}">
-                              </i>اقرأ مع جيل
+                              </i> {{__('site.feautre2')}}
 
 
                           </div>
                           <div class="feature-item">
                               <i>
                                   <img src="{{ asset('front-assets/images/kidsfeature/radioicon.svg')}}">
-                              </i> راديو جيل
+                              </i>  {{__('site.feautre3')}}
 
 
                           </div>
                           <div class="feature-item">
                               <i>
                                   <img src="{{ asset('front-assets/images/kidsfeature/teachicon.svg')}}">
-                              </i> تعلم ومهارات
+                              </i>  {{__('site.feautre4')}}
 
 
                           </div>
                           <div class="feature-item">
                               <i>
                                   <img src="{{ asset('front-assets/images/kidsfeature/gamesicon.svg')}}">
-                              </i> ألعاب جيل
+                              </i>  {{__('site.feautre5')}}
 
 
                           </div>
                           <div class="feature-item">
                               <i>
                                   <img src="{{ asset('front-assets/images/kidsfeature/readicon.svg')}}">
-                              </i> أناشيد جيل
+                              </i>  {{__('site.feautre6')}}
 
 
                           </div>
@@ -396,7 +384,7 @@
                       <div class="g-imge">
                           <div class="img-1 s-icon">
                               <div class="slides-title">
-                                  ماذا يقدم جيل ؟
+                                {{__('site.what_we_offer')}}
                               </div>
                               <div class="slider-feature w-100">
                                   <ul id="sliderfeatures">
@@ -473,9 +461,9 @@
           <div class="container-xl">
               <div class="row">
                   <div class="title__section text-center">
-                      <div class="subhead text-primarydark mb-2"><span> الوالدين </span></div>
+                      <div class="subhead text-primarydark mb-2"><span> {{__('site.parents')}} </span></div>
                       <div class="head text-blacklight">
-                          ما يوفره جيل للوالدين
+                         {{__('site.Jeel_offers_parents')}}
                       </div>
                   </div>
                   <div class="main-text">

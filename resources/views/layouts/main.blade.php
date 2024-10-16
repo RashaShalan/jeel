@@ -2,7 +2,7 @@
 <html class="no-js">
 
     <head>
-        <title>Jeel App</title>
+        <title>  @yield('title')Jeel App</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
         <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('front-assets/images/favicon/apple-touch-icon.png')}}">

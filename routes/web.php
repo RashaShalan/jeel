@@ -15,6 +15,11 @@ Route::prefix('{locale?}')
   ->middleware('setLocale')
   ->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
+    Route::get('/Aboutus', [HomeController::class, 'about'])->name('Aboutus');
+    Route::get('/Download', [HomeController::class, 'download_app'])->name('Download');
+    Route::get('/FAQS', [HomeController::class, 'faq_question'])->name('FAQ');
+    Route::get('/Jeel-questions', [HomeController::class, 'questions'])->name('jeelQuestions');
+    Route::get('/Contact-us', [HomeController::class, 'contact_us'])->name('Contact_us');
 
     /**
      * Dasnboard
