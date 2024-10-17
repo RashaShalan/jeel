@@ -483,15 +483,13 @@
                           </video>
                       </div>
                       <div class="main-description">
-                          <h4>تقـارير مفصلة للاستخــدام</h4>
+                          <h4>{{__('site.details_reports')}}</h4>
                           <ul>
                               <li>
-                                  يحتـــوي التقـرير على عدد ســـاعــات استخـــدام الطفل و مشاهداته
-
+                                {{__('site.report_item_1')}}
                               </li>
                               <li>
-                                  يســـــاعد على معـرفة المحتوى الذي يميل إليــــــه الطفل وترشيد عدد ساعات
-                                  استخدامه وتوجيهه
+                                {{__('site.report_item_2')}}
                               </li>
                           </ul>
 
@@ -506,19 +504,17 @@
                           </video>
                       </div>
                       <div class="main-description">
-                          <h4>قســم جســور</h4>
+                          <h4>{{__('site.Jasor_dept')}}</h4>
                           <ul>
                               <li>
-                                  القسـم التربوي الخاص بالآبـاء والأمهـات في جيل
+                                  {{__('site.dept_item_1')}}
 
                               </li>
                               <li>
-                                  تتوفر به أدوات المتابعة والتحكــــم في التطبيق
-
+                                {{__('site.dept_item_2')}}
                               </li>
                               <li>
-                                  مقالات ومحتوى تربوي
-                              </li>
+                                {{__('site.dept_item_3')}}                              </li>
                           </ul>
 
                       </div>
@@ -531,14 +527,14 @@
                           </video>
                       </div>
                       <div class="main-description">
-                          <h4>4 حسابــات × حســاب واحــد</h4>
+                          <h4>{{__('site.accounts_in_one')}}</h4>
                           <ul>
                               <li>
-                                  الاشتراك الواحد يعطيك حرية إنشاء حـتى ثلاثة حسابات
+                                {{__('site.account_item_1')}}
 
                               </li>
                               <li>
-                                  كل حساب يستطيع الأطفال الاستمتاع به بشكل مستقل.
+                                  {{__('site.account_item_2')}}
                               </li>
                           </ul>
 
@@ -553,11 +549,10 @@
                           </video>
                       </div>
                       <div class="main-description">
-                          <h4>موسيقي أو بدون موسيقى:</h4>
+                          <h4>{{__('site.music_or_not')}}</h4>
                           <ul>
                               <li>
-                                  يأتي التطبيق بنسختين يمكنك اختيار أيهما والتبديل بينهما بسهولة من خلال إعدادات
-                                  التطبيق.
+                                 {{__('site.music_item_1')}}
                               </li>
                           </ul>
                       </div>
@@ -579,15 +574,15 @@
                           <div class="txt">
                               <div class="heading">
 
-                                  <p class="mb-0"> جاهز لرحلـــة تعليمية </p>
-                                  <p class="mb-0"> ممتعـة وآمنـة لــطفلك ؟ </p>
+                                  <p class="mb-0">{{__('site.ready_education')}}</p>
+                                  <p class="mb-0"> {{__('site.fun_safe')}}</p>
 
 
                               </div>
 
 
                               <h2>
-                                  حمل التطبيق الان متوفر على :
+                                 {{__('site.app_avaliable')}}
                               </h2>
 
                               <div class="download-links">
@@ -628,8 +623,8 @@
           <div class="container-xl">
               <div class="row">
                   <div class="title__section text-center">
-                      <div class="subhaed text-blue mb-2"><span>الاراء</span></div>
-                      <div class="head text-primary">آراء عملاء جيل</div>
+                      <div class="subhaed text-blue mb-2"><span>{{__('site.Testomnials')}}</span></div>
+                      <div class="head text-primary">{{__('site.jeel_testomnials')}}</div>
                   </div>
                   <div class="main-text">
                       <p class="col-md-8 mx-auto text-center">
@@ -645,17 +640,13 @@
                   </div>
 
                   <div class="descripe">
-                      <h2 class="text-primary mb-4">“منصة جيل كانت الأفضل بالنسبة لأبنائي لاحظت تطور كبير في
-                          مستواهم وشغفهم
-                          الكبير
-                          والجديد في حب
-                          التعلم بسبب تحويل التعليم التقليدي الي تعليم ممتع ومفيد شكرا منصة جيل”</h2>
+                      <h2 class="text-primary mb-4">“{{__('site.testomnial_1')}}”</h2>
 
                       <div class="person-details">
                           <img src="{{ asset('front-assets/images/quote-ico.svg')}}">
                           <div class="mx-3">
-                              <h4>عادل التهامي</h4>
-                              <h5>مصمم تجربة مستخدم @تطبيق جيل</h5>
+                              <h4>{{__('site.testomnial_user_1')}}</h4>
+                              <h5>{{__('site.testomnial_user_1_info')}}</h5>
                           </div>
                       </div>
                   </div>
@@ -669,8 +660,8 @@
           <div class="container-xl">
               <div class="row">
                   <div class="title__section text-center mb-3">
-                      <div class="subhaed text-primarydark mb-2"><span>الباقات</span></div>
-                      <div class="head text-blacklight">بــاقـــات جيل</div>
+                      <div class="subhaed text-primarydark mb-2"><span>{{__('site.packages')}}</span></div>
+                      <div class="head text-blacklight">{{__('site.Jeel_packge')}}</div>
 
                   </div>
                   <p class="col-md-8 main-text mx-auto text-center">
@@ -687,19 +678,19 @@
                                   <img src="{{ asset('front-assets/images/pricing-icon.svg')}}" alt="">
                               </div>
                               <div class="main-title">
-                                  <h2>الاشتراك السنوى</h2>
-                                  <p>الباقة الافضل اموصى بها</p>
+                                  <h2>{{__('site.annual_subsc')}}</h2>
+                                  <p>{{__('site.best_package')}}</p>
                               </div>
                               <div class="price">
                                   <span>649.99 ج.م</span>
                               </div>
                               <div class="action">
                                   <button class="btn">
-                                      اختــــر البـاقـة
+                                     {{__('site.choose_package')}}
                                   </button>
                               </div>
                               <div class="more">
-                                  <a href="#">المزيد</a>
+                                <a href="#">{{__('site.more')}}</a>
                               </div>
                           </div>
                       </div>
@@ -709,19 +700,19 @@
                                   <img src="{{ asset('front-assets/images/pricing-icon.svg')}}" alt="">
                               </div>
                               <div class="main-title">
-                                  <h2>الاشتراك السنوى</h2>
-                                  <p>الباقة الافضل اموصى بها</p>
+                                  <h2> {{__('site.annual_subsc')}}</h2>
+                                  <p>{{__('site.best_package')}}</p>
                               </div>
                               <div class="price">
                                   <span>649.99 ج.م</span>
                               </div>
                               <div class="action">
                                   <button class="btn">
-                                      اختــــر البـاقـة
+                                     {{__('site.choose_package')}}
                                   </button>
                               </div>
                               <div class="more">
-                                  <a href="#">المزيد</a>
+                                <a href="#">{{__('site.more')}}</a>
                               </div>
                           </div>
                       </div>
@@ -731,19 +722,19 @@
                                   <img src="{{ asset('front-assets/images/pricing-icon.svg')}}" alt="">
                               </div>
                               <div class="main-title">
-                                  <h2>الاشتراك السنوى</h2>
-                                  <p>الباقة الافضل اموصى بها</p>
+                                  <h2> {{__('site.annual_subsc')}}</h2>
+                                  <p>{{__('site.best_package')}}</p>
                               </div>
                               <div class="price">
                                   <span>649.99 ج.م</span>
                               </div>
                               <div class="action">
                                   <button class="btn">
-                                      اختــــر البـاقـة
+                                     {{__('site.choose_package')}}
                                   </button>
                               </div>
                               <div class="more">
-                                  <a href="#">المزيد</a>
+                                  <a href="#">{{__('site.more')}}</a>
                               </div>
                           </div>
                       </div>
@@ -752,7 +743,7 @@
               <div class="pay">
                   <div class="row">
                       <div class="h-pay d-flex justify-content-between align-items-center">
-                          <span class="how-pay">طــرق الـدفع</span>
+                          <span class="how-pay">{{__('site.payment_method')}}</span>
                           <span class="have-account">
                               <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                                   <path d="M2.68896 17.3436H25.1466" stroke="#4F0F4B" stroke-width="1.98155" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -761,7 +752,7 @@
                                   <path d="M6.9834 24.2134H9.25684" stroke="#4F0F4B" stroke-width="1.98155" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                   <path d="M12.0796 24.2134H16.625" stroke="#4F0F4B" stroke-width="1.98155" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                               </svg>
-                              هل لديك بطاقة دفع مسبقة من جيل ؟
+                             {{__('site.pre_paid')}}
                           </span>
                       </div>
                   </div>
@@ -772,7 +763,7 @@
                                   <img src="{{ asset('front-assets/images/ewallet-icon.svg')}}" alt="">
                               </div>
                               <div class="main-title">
-                                  محفظة الكترونية
+                                 {{__('site.pay_method_1')}}
                               </div>
                           </div>
                       </div>
@@ -782,7 +773,7 @@
                                   <img src="{{ asset('front-assets/images/mastercard-icon.svg')}}" alt="">
                               </div>
                               <div class="main-title">
-                                  بطاقة إئتمان
+                                {{__('site.pay_method_2')}}
                               </div>
                           </div>
                       </div>
@@ -792,7 +783,7 @@
                                   <img src="{{ asset('front-assets/images/fawry-icon.svg')}}" alt="">
                               </div>
                               <div class="main-title">
-                                  الدفع بفورى
+                                {{__('site.pay_method_3')}}
                               </div>
                           </div>
                       </div>
@@ -802,7 +793,7 @@
                                   <img src="{{ asset('front-assets/images/we-icon.svg')}}" alt="">
                               </div>
                               <div class="main-title">
-                                  وى باى
+                                {{__('site.pay_method_4')}}
                               </div>
                           </div>
                       </div>
@@ -812,7 +803,7 @@
                                   <img src="{{ asset('front-assets/images/etisalat-icon.svg')}}" alt="">
                               </div>
                               <div class="main-title">
-                                  اتصالات باى
+                                {{__('site.pay_method_5')}}
                               </div>
                           </div>
                       </div>
@@ -827,9 +818,9 @@
               <div class="row">
                   <div class="col-md-6">
                       <div class="title__section">
-                          <div class="subhead text-primarydark mb-2"><span> تواصل معنا</span></div>
-                          <div class="head text-primary mb-3"> ترغب بالتواصل معنا ؟</div>
-                          <h4> رجاءً تفضل..</h4>
+                          <div class="subhead text-primarydark mb-2"><span> {{__('site.comunicate_with_us')}}</span></div>
+                          <div class="head text-primary mb-3">{{__('site.wish_communicate')}}</div>
+                          <h4> {{__('site.please_in')}}</h4>
                       </div>
                       <div class="social-links my-4">
                           <ul class="d-flex align-items-center">
@@ -893,15 +884,15 @@
                       </div>
                       <form class="row form-contact">
                           <div class="col-sm-6 mb-3">
-                              <label class="form-label"> الاسم </label>
-                              <input type="text" class="form-control" placeholder="اكتب اسمك هنا...">
+                              <label class="form-label"> {{__('site.name')}} </label>
+                              <input type="text" class="form-control" placeholder="{{__('site.enter_name')}}">
                           </div>
                           <div class="col-sm-6 mb-3">
-                              <label class="form-label">البريد الالكترونى</label>
+                              <label class="form-label">{{__('site.email')}} </label>
                               <input type="email" class="form-control" placeholder=" example@gmail.com ">
                           </div>
                           <div class="col-sm-6 mb-3">
-                              <label class="form-label"> رقم الهاتف </label>
+                              <label class="form-label">{{__('site.phone')}}</label>
                               <div class="input-group tel mb-3">
                                   <input type="email" class="form-control" placeholder=" 0123456789 ">
 
@@ -913,26 +904,26 @@
                               </div>
                           </div>
                           <div class="col-sm-6 mb-3">
-                              <label class="form-label"> سبب التواصل </label>
+                              <label class="form-label"> {{__('site.reason')}}</label>
                               <select class="form-select" required>
-                                  <option value="" disabled="disabled" selected="selected">اكتب اسمك هنا...</option>
+                                  <option value="" disabled="disabled" selected="selected"{{__('site.enter_name')}}</option>
                                   <option value="1">One</option>
                                   <option value="2">Two</option>
                               </select>
                           </div>
                           <div class="col-12 mb-3">
-                              <label class="form-label"> اكتب رسالتك </label>
-                              <textarea class="form-control" placeholder="اكتب رسالتك هنا ..." rows="7"></textarea>
+                              <label class="form-label"> {{__('site.write_msg')}}  </label>
+                              <textarea class="form-control" placeholder=" {{__('site.write_msg_here')}}" rows="7"></textarea>
                           </div>
                           <div class="col-12 mb-3">
-                              <button class="btn btn-primary w-100"> أرسل رسالتك</button>
+                              <button class="btn btn-primary w-100">  {{__('site.send_msg')}} </button>
                           </div>
                       </form>
                   </div>
                   <div class="col-md-6">
                       <div class="contact-info d-flex justify-content-center align-items-center">
                           <div class="content">
-                              <h2 class="mb-5">بيــانـات التـــواصل معنــا</h2>
+                              <h2 class="mb-5">{{__('site.comunicate_info')}}</h2>
                               <ul>
 
                                   <li>
