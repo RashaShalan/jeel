@@ -115,4 +115,10 @@ return [
 'save_children'=>'of children have been exposed to pornographic content on the Internet.',
 'One_from_ten'=>'one from each 10',
 'unsafe_content'=>'Users exposed to unsafe content are a child who viewed this content.',
+'arabic_content'=>'Arabic content accounts for only 3% of the total global content provided to children.',
+ 'children_foregin_content'=>'Foreign content provided for children',
+ 'arabic_foregin_content'=>'Foreign content provided for children',
+ 'child_porn'=>'Children exposed to pornographic content',
+ 'child_unporn'=>'Children who have not been exposed to pornographic content',
+
 ];

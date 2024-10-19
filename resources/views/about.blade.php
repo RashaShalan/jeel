@@ -56,11 +56,7 @@
                 </li>
                 <li>
                   <span class="num">03</span>
-                  <p>
-                    تبلغ نسبة<span class="proportion">
-                      المحتوى العربي %3
-                    </span>
-                    فقط من إجمالي المحتوى العالمي المقدم للأطفال
+                  <p>{{__('site.arabic_content')}}
                   </p>
                 </li>
               </ul>
@@ -79,13 +75,13 @@
                     <p><span><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <circle cx="6.49648" cy="6.48257" r="5.77285" fill="#F39C28"/>
                         </svg>
-                        محتوى أجنبى مقدم للأطفال</span><span class="num">97%</span></p>
+                       {{__('site.children_foregin_content')}}</span><span class="num">97%</span></p>
                   </div>
                   <div class="analyst">
                     <p><span><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <circle cx="6.49648" cy="6.33731" r="5.77285" fill="#53B0F3"/>
                         </svg>
-                        محتوى عربى مقدم للأطفال </span><span class="num">3%</span></p>
+                        {{__('site.children_arabic_content')}}  </span><span class="num">3%</span></p>
                   </div>
                 </div>
                 <div class="chart">
@@ -96,13 +92,13 @@
                     <p><span><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <circle cx="6.49648" cy="6.48257" r="5.77285" fill="#88115F"/>
                         </svg>
-                        أطفال تعرضوا لمحتوى إباحي </span><span class="num">98.9%</span></p>
+                       {{__('site.child_porn')}}</span><span class="num">98.9%</span></p>
                   </div>
                   <div class="analyst">
                     <p><span><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <circle cx="6.49648" cy="6.33731" r="5.77285" fill="#6765FE"/>
                         </svg>
-                        أطفال لم تعرضوا لمحتوى إباحي</span><span class="num">1.1%</span></p>
+                        {{__('site.child_unporn')}}</span><span class="num">1.1%</span></p>
                   </div>
                 </div>
               </div>
