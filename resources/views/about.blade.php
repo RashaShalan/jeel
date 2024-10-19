@@ -18,8 +18,8 @@
             وليس المحتوى) ويُستخدم في صناعات المطابع ودور النش
           </p>
           <div class="action">
-            <button class="btn btn-primary">اشترك الان</button>
-            <button class="btn btn-outlineprimary">حمل التطبيق</button>
+            <button class="btn btn-primary">{{__('site.joinNow')}} </button>
+            <button class="btn btn-outlineprimary">{{__('site.download_app')}} </button>
           </div>
         </div>
       </section>
@@ -32,31 +32,27 @@
             <div class="col-md-6">
               <div class="title__section">
                 <div class="subhaed text-blue mb-2">
-                  <span> وجود جيل </span>
+                  <span>{{__('site.jeel_exist')}}</span>
                 </div>
-                <div class="head text-primary">سبب وجـــود جـــيل</div>
+                <div class="head text-primary">{{__('site.why_jeel_exist')}}</div>
               </div>
               <div class="main-text">
                 <p>
-                  مع هيمنة المحتوى الأجنبي على الرسائل التي يتم بثها للأطفال، نرصد لكم واقع ما يتعرض له أطفالنا يوميا في
-                  مواقع التواصل
-                  الاجتماعي. والإنترنت المفتوح
+                  {{__('site.monitor_content')}}
                 </p>
               </div>
               <ul class="statistics">
                 <li>
                   <span class="num">01</span>
                   <p>
-                    <span class="proportion">98.9%</span>
-                    من الأطفال تعرضوا لمحتوى إباحي على الإنترنت.
+                    <span class="proportion">98.9%</span>{{__('site.save_children')}}
                   </p>
                 </li>
                 <li>
                   <span class="num">02</span>
                   <p>
-                    <span class="proportion">واحد من كل 10</span>
-                    مستخدمين تعرضوا لمحتوى غير آمن يكون طفلا رأى هذا المحتوى
-                  </p>
+                    <span class="proportion">{{__('site.One_from_ten')}}</span>
+                      {{__('site.unsafe_content')}}                  </p>
                 </li>
                 <li>
                   <span class="num">03</span>

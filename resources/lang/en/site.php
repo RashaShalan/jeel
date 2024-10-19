@@ -108,4 +108,11 @@ return [
   'write_msg_here'=>'Write your message here ....',
   'send_msg'=>'Send your message',
   'comunicate_info'=>'Communication information',
+  /**About us page */
+  'jeel_exist'=>"Jeel's existence ",
+  'why_jeel_exist'=>"The reason for Jeel's existence",
+  'monitor_content'=>"With foreign content dominating the messages broadcasted to children, we are monitoring the reality of what our children are exposed to daily on social media and the open internet.",
+'save_children'=>'of children have been exposed to pornographic content on the Internet.',
+'One_from_ten'=>'one from each 10',
+'unsafe_content'=>'Users exposed to unsafe content are a child who viewed this content.',
 ];
