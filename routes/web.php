@@ -7,9 +7,7 @@ use App\Http\Controllers\admin\dashboard\Analytics;
 use App\Http\Controllers\admin\authentications\LoginBasic;
 use App\Http\Controllers\admin\authentications\RegisterBasic;
 use App\Http\Controllers\admin\authentications\ForgotPasswordBasic;
-/* Route::get('/dashboard', function () {
-  return redirect(app()->getLocale() . '/dashboard');
-}); */
+use App\Http\Controllers\admin\SliderController;
 
 Route::prefix('{locale?}')
   ->middleware('setLocale')
@@ -34,6 +32,14 @@ Route::prefix('{locale?}')
       ],
       function () {
         Route::get('/', [Analytics::class, 'index'])->name('dashboard-analytics');
+        /**Slider */
+        Route::any('/slider', [SliderController::class, 'index']);
+        Route::any('/slider/add', [SliderController::class, 'store']);
+        Route::any('/slider/get', [SliderController::class, 'show']);
+        Route::any('/slider/edit', [SliderController::class, 'update']);
+        Route::any('/slider/delete', [SliderController::class, 'destroy']);
+        Route::any('/slider/getData', [SliderController::class, 'getDataInfo'])->name('slider.getData');
+
       }
     );
 

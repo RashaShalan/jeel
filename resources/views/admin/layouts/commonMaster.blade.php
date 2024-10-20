@@ -23,6 +23,7 @@
 
   <!-- Include Scripts for customizer, helper, analytics, config -->
   @include('admin/layouts/sections/scriptsIncludes')
+  
 </head>
 
 <body>

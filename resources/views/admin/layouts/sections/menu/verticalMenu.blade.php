@@ -32,7 +32,7 @@
 
     </li>
     <li class="menu-item ">
-      <a href="{{ url(app()->getLocale() .'/dashboard') }}" class= "menu-link" >
+      <a href="{{ url(app()->getLocale() .'/dashboard/slider') }}" class= "menu-link" >
 
         <i class="menu-icon tf-icons mdi mdi-cube-outline"></i>
 
