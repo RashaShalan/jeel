@@ -34,12 +34,16 @@ Route::prefix('{locale?}')
         Route::get('/', [Analytics::class, 'index'])->name('dashboard-analytics');
         /**Slider */
         Route::any('/slider', [SliderController::class, 'index']);
+
+        Route::any('/slider/create', [SliderController::class, 'create']);
+
         Route::any('/slider/add', [SliderController::class, 'store']);
         Route::any('/slider/get', [SliderController::class, 'show']);
-        Route::any('/slider/edit', [SliderController::class, 'update']);
+        Route::get('/slider/edit', [SliderController::class, 'edit']);
+
+        Route::post('/slider/update', [SliderController::class, 'update']);
         Route::any('/slider/delete', [SliderController::class, 'destroy']);
         Route::any('/slider/getData', [SliderController::class, 'getDataInfo'])->name('slider.getData');
-
       }
     );
 

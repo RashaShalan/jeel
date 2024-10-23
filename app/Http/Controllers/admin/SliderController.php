@@ -5,6 +5,10 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\slider;
+use App\helper; // Adjust this namespace as per your helper file location
+use Yajra\DataTables\Facades\DataTables;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Auth;
 
 class SliderController extends Controller
 {
@@ -42,6 +46,7 @@ class SliderController extends Controller
   public function create()
   {
     //
+    return view('admin/content/slider/add');
   }
 
   /**
@@ -49,7 +54,60 @@ class SliderController extends Controller
    */
   public function store(Request $request)
   {
-    //
+    $rules = [
+      'title_ar' => 'required|string',
+      'title_en' => 'required|string',
+      'desc_ar' => 'required|string',
+      'desc_en' => 'required|string',
+    ];
+
+    // // Define custom messages
+    $messages = [
+      'title_ar.required' => 'Title in Arabic is required',
+      'title_en.required' => 'Title in English is required',
+      'title_ar.string' => "Title can't contanin symbols",
+      'title_en.string' => "Title can't contanin symbols",
+      'desc_ar.required' => 'Description in Arabic is required',
+      'desc_en.required' => 'Description in English is required',
+
+      'desc_ar.string' => "Description can't contanin symbols",
+      'desc_en.string' => "Description can't contanin symbols",
+    ];
+
+    // // Validate the request
+    $validatedData = Validator::make($request->all(), $rules, $messages);
+
+    // // Validate the request
+    // $request->validate($rules, $messages);
+    if ($validatedData->fails()) {
+      //  dd($validatedData);
+      return redirect()
+        ->back()
+        ->withErrors($validatedData)
+        ->withInput();
+    }
+    $slider = new Slider();
+    $slider->title_ar = $request->title_ar;
+    $slider->title_en = $request->title_en;
+    $slider->desc_ar = $request->desc_ar;
+    $slider->desc_en = $request->desc_en;
+    $slider->created_by = Auth::user()->id;
+    $slider->created_at = now();
+
+    $slider->save();
+    if ($request->hasFile('image')) {
+      UploadFiles('uploads/slider', 'image', $slider, $request->image);
+    }
+    if (!empty($slider)) {
+      return redirect()
+        ->to(app()->getLocale() . '/dashboard/slider')
+        ->with('message', 'Slider added successfully');
+    } else {
+      // Handle specific errors based on listener responses
+      return redirect()
+        ->back()
+        ->with('message', 'Wrong ');
+    }
   }
 
   /**
@@ -63,24 +121,84 @@ class SliderController extends Controller
   /**
    * Show the form for editing the specified resource.
    */
-  public function edit(string $id)
+  public function edit(Request $request)
   {
+    // dd($request);
     //
+    $slider = slider::where('id', $request->id)->first();
+    // dd($slider);
+    return view('admin/content/slider/edit', compact('slider'));
   }
 
   /**
    * Update the specified resource in storage.
    */
-  public function update(Request $request, string $id)
+  public function update(Request $request)
   {
-    //
+    $rules = [
+      'title_ar' => 'required|string',
+      'title_en' => 'required|string',
+      'desc_ar' => 'required|string',
+      'desc_en' => 'required|string',
+    ];
+
+    // // Define custom messages
+    $messages = [
+      'title_ar.required' => 'Title in Arabic is required',
+      'title_en.required' => 'Title in English is required',
+      'title_ar.string' => "Title can't contanin symbols",
+      'title_en.string' => "Title can't contanin symbols",
+      'desc_ar.required' => 'Description in Arabic is required',
+      'desc_en.required' => 'Description in English is required',
+
+      'desc_ar.string' => "Description can't contanin symbols",
+      'desc_en.string' => "Description can't contanin symbols",
+    ];
+
+    // // Validate the request
+    $validatedData = Validator::make($request->all(), $rules, $messages);
+
+    // // Validate the request
+    // $request->validate($rules, $messages);
+    if ($validatedData->fails()) {
+      //  dd($validatedData);
+      return redirect()
+        ->back()
+        ->withErrors($validatedData)
+        ->withInput();
+    }
+    $slider = Slider::find($request->slider_id);
+    $slider->title_ar = $request->title_ar;
+    $slider->title_en = $request->title_en;
+    $slider->desc_ar = $request->desc_ar;
+    $slider->desc_en = $request->desc_en;
+    $slider->updated_by = Auth::user()->id;
+    $slider->updated_at = now();
+
+    $slider->save();
+    if ($request->hasFile('image')) {
+      UploadFiles('uploads/slider', 'image', $slider, $request->image);
+    }
+    if (!empty($slider)) {
+      return redirect()
+        ->to(app()->getLocale() . '/dashboard/slider')
+        ->with('message', 'Slider Updated successfully');
+    } else {
+      // Handle specific errors based on listener responses
+      return redirect()
+        ->back()
+        ->with('message', 'Wrong ');
+    }
   }
 
   /**
    * Remove the specified resource from storage.
    */
-  public function destroy(string $id)
+  public function destroy(Request $request)
   {
     //
+    $slider = Slider::find($request->id);
+    $slider->delete();
+    return '1';
   }
 }

@@ -3,9 +3,20 @@
 @section('title', 'Slider ')
 
 @section('content')
-<h4 class="py-3 mb-4"><span class="text-muted fw-light">Sliders /</span>
-</h4>
 
+<div class="row">
+  <div class="container welcome col-11">
+      <div class="d-flex justify-content-between">
+        <h4 class="py-3 mb-4"><span class="text-muted fw-light">Sliders /</span>
+        </h4>
+          <a class="btn-all px-3"  style="color: #0D992C;"  href="{{ url(app()->getLocale() .'/dashboard/slider/create') }}">
+              اضافة
+              <i class="fa-solid fa-plus"></i>
+          </a>
+      </div>
+  </div>
+</div>
+<br>
 <!-- Basic Bootstrap Table -->
 <div class="card">
   <h5 class="card-header">Table Basic</h5>
@@ -21,7 +32,7 @@
         </tr>
       </thead>
       <tbody class="table-border-bottom-0">
-        <tr>
+        {{-- <tr>
           <td>1</td>
           <td><i class="mdi mdi-wallet-travel mdi-20px text-danger me-3"></i><span class="fw-medium">Tours Project</span></td>
           <td>Albert Cook</td>
@@ -37,7 +48,7 @@
           </td>
         </tr>
 
-
+ --}}
       </tbody>
     </table>
   </div>
@@ -86,9 +97,9 @@
               targets: -1,
               render: function(data, type, row) {
                   return `
-                   <a href="#" class="btn btn-sm " style="background-color: #274373;" onclick="openViewModal('${row.id}', '${row.name}')"> <i class="fa fa-eye"></i>عرض  </a>
-                   <a href="#" class="btn btn-sm" style="background-color: #F7AF15;" onclick="openEditModal('${row.id}', '${row.name}')"> <i class="fa fa-edit"></i> تعديل </a>
 
+                   <a href="{{url(app()->getLocale() .'/dashboard/slider/edit')}}?id=${row.id}" class="btn btn-sm" style="background-color: #F7AF15;" onclick=""> <i class="fa fa-edit"></i>Edit </a>
+ <a href="#" class="btn btn-sm " style="background-color: #da2323; color:#FFF;" onclick="confirmDelete('${row.id}')"> <i class="fa fa-trash"></i>Delete  </a>
 
                   `;
               }
@@ -121,5 +132,45 @@
           }
       });
   });
+  function confirmDelete(id)
+  {
+    Swal.fire({
+  title: "Are you sure?",
+  text: "You won't be able to revert this!",
+  icon: "warning",
+  showCancelButton: true,
+  confirmButtonColor: "#3085d6",
+  cancelButtonColor: "#d33",
+  confirmButtonText: "Yes, delete it!"
+}).then((result) => {
+  if (result.isConfirmed) {
+    $.ajaxSetup({
+                            headers: {
+                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                            }
+                        });
+                        $.ajax({
+                            url: '{{url(app()->getLocale() .'/dashboard/slider/delete')}}',
+                            type: 'POST',
+                            data: {
+                                id: id
+                            },
+                            dataType: 'JSON',
+                            success: function(response) {
+
+                            console.log("Data: " + response + "\nStatus: ");
+                          Swal.fire({
+                              title: "Deleted!",
+                              text: "Your file has been deleted.",
+                              icon: "success"
+                            });
+                            document.location.reload();
+                          }
+  });
+
+
+  }
+});
+  }
 </script>
 @endsection

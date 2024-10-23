@@ -3,11 +3,6 @@
 @section('title')Home page | @endsection
 
 @section('content')
-
-
-
-
-            <!--==============================End Header ==============================-->
             <!--==============================Start Hero Section ==============================-->
             <section class="home_banner">
               <div class="banner_slider slider" dir="{{__('site.class')}}">
@@ -74,7 +69,6 @@
                           </div>
                       </div>
                   </div>
-
               </div>
 
 
