@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\slider;
+use App\Models\social_links;
 
 class HomeController extends Controller
 {
@@ -11,7 +12,8 @@ class HomeController extends Controller
   public function index()
   {
     $sliders = Slider::all();
-    return view('homepage', compact('sliders'));
+    $social=social_links::first();
+    return view('homepage', compact('sliders','social'));
   }
 
   public function about()
