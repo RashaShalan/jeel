@@ -8,6 +8,7 @@ use App\Http\Controllers\admin\authentications\LoginBasic;
 use App\Http\Controllers\admin\authentications\RegisterBasic;
 use App\Http\Controllers\admin\authentications\ForgotPasswordBasic;
 use App\Http\Controllers\admin\SliderController;
+use App\Http\Controllers\admin\SocialController;
 
 Route::prefix('{locale?}')
   ->middleware('setLocale')
@@ -44,6 +45,10 @@ Route::prefix('{locale?}')
         Route::post('/slider/update', [SliderController::class, 'update']);
         Route::any('/slider/delete', [SliderController::class, 'destroy']);
         Route::any('/slider/getData', [SliderController::class, 'getDataInfo'])->name('slider.getData');
+        /**Socail */
+        Route::any('/social', [SocialController::class, 'index']);
+        Route::any('/social/add', [SocialController::class, 'store']);
+
       }
     );
 

@@ -9,7 +9,6 @@ return [
   'jeel_questions' => 'أسئلة جيل',
   'faq_questions' => 'الأسئلة الشائعة',
   'download' => 'تحميل',
-
   'About_jeel' => 'عن جيل',
   'class' => 'rtl',
   /**What is jeel App Home page */
