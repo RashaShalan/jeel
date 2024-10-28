@@ -12639,6 +12639,7 @@ $(window).load(function ()
 
     }
   });
+
 });
 Jeelapp.menu = function ()
 {
@@ -12817,6 +12818,7 @@ Jeelapp.questions = function ()
 
 
 }
+
 Jeelapp.initialize = function ()
 {
   Jeelapp.menu();
@@ -12826,7 +12828,6 @@ Jeelapp.initialize = function ()
   Jeelapp.features();
   Jeelapp.awards();
   Jeelapp.questions();
-
 };
 
 jQuery(document).ready(function ()
@@ -12836,6 +12837,27 @@ jQuery(document).ready(function ()
 lightGallery(document.getElementById('video-about'), {
   plugins: [lgVideo],
 });
+
+
+
+const videos = document.querySelectorAll("video")
+
+videos.forEach(video =>
+{
+
+  let previewTimeout = null;
+
+  video.addEventListener("mouseenter", function ()
+  {
+    this.muted = true;
+    this.currentTime = 1;
+    this.playbackRate = 0.5;
+    this.play();
+  });
+
+
+
+})
 "use strict";
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
