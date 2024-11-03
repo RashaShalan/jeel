@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\slider;
 use App\Models\social_links;
+use App\Models\contact_us;
 
 class HomeController extends Controller
 {
@@ -12,10 +13,20 @@ class HomeController extends Controller
   public function index()
   {
     $sliders = Slider::all();
-    $social=social_links::first();
-    return view('homepage', compact('sliders','social'));
+    $social = social_links::first();
+    return view('homepage', compact('sliders', 'social'));
   }
-
+  public function send_contact_us(Request $request)
+  {
+    $contact = new contact_us();
+    $contact->name = $request->name;
+    $contact->email = $request->email;
+    $contact->phone = $request->phone;
+    $contact->reason = $request->reason;
+    $contact->msg = $request->msg;
+    $contact->save();
+    return true;
+  }
   public function about()
   {
     return view('about');

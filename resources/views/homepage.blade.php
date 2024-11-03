@@ -893,7 +893,7 @@
                           </ul>
 
                       </div>
-                      <form class="row form-contact" method="POST" action="{{ url(app()->getLocale() .'/contact_us') }}">
+                      <form class="row form-contact"  id="contactForm">
                         @csrf
                           <div class="col-sm-6 mb-3">
                               <label class="form-label"> {{__('site.name')}} </label>
@@ -917,7 +917,7 @@
                           </div>
                           <div class="col-sm-6 mb-3">
                               <label class="form-label"> {{__('site.reason')}}</label>
-                              <select class="form-select" required>
+                              <select class="form-select" required name="reason" id="reason">
                                   <option value="" disabled="disabled" selected="selected"{{__('site.enter_name')}}</option>
                                   <option value="1">One</option>
                                   <option value="2">Two</option>
@@ -925,10 +925,10 @@
                           </div>
                           <div class="col-12 mb-3">
                               <label class="form-label"> {{__('site.write_msg')}}  </label>
-                              <textarea class="form-control" placeholder=" {{__('site.write_msg_here')}}" rows="7"></textarea>
+                              <textarea class="form-control" placeholder=" {{__('site.write_msg_here')}}" rows="7"  name="msg" id="msg"></textarea>
                           </div>
                           <div class="col-12 mb-3">
-                              <button class="btn btn-primary w-100">  {{__('site.send_msg')}} </button>
+                              <button class="btn btn-primary w-100" onclick="send_contact(event)">  {{__('site.send_msg')}} </button>
                           </div>
                       </form>
                   </div>
@@ -1021,5 +1021,33 @@
 
 
       </section>
+      <script type="text/javascript">
+        function send_contact(e)
+        {e.preventDefault();
+            var Routeurl="{{url(app()->getLocale() .'/send_contact')}}";
+            console.log(Routeurl)
+            var Formdata=$('#contactForm').serialize();
+            console.log(Formdata)
+          //  debugger;
+            $.ajax({
+                    url: Routeurl, // Changed to $(this)
+                    type: 'POST',
+                    data: Formdata,
+                    success: function (response) {
+                      Swal.fire({
+                        title: "Good job!",
+                        text: "You clicked the button!",
+                        icon: "success"
+                      });
+                    },
+                    error: function (xhr, status, error) {
+                        // Handle error response
+                        console.error(xhr.responseText);
+                    }
+        });
+        return false;
+
+        }
+    </script>
       <!--==============================End Contact Section ==============================-->
       @endsection

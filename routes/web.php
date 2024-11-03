@@ -19,7 +19,9 @@ Route::prefix('{locale?}')
     Route::get('/FAQS', [HomeController::class, 'faq_question'])->name('FAQ');
     Route::get('/Jeel-questions', [HomeController::class, 'questions'])->name('jeelQuestions');
     Route::get('/Contact-us', [HomeController::class, 'contact_us'])->name('Contact_us');
+    Route::post('/send_contact', [HomeController::class, 'send_contact_us'])->name('send_contact');
 
+    
     /**
      * Dasnboard
      */
