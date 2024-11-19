@@ -48,6 +48,8 @@ class HomeController extends Controller
 
   public function contact_us()
   {
-    return view('contact');
+    $social = social_links::first();
+
+    return view('contact' ,compact( 'social'));
   }
 }

@@ -1,6 +1,6 @@
    <!--==============================Start Header ==============================-->
    <header class="inner">
-    <div class="container-xl-xl">
+    <div class="container-xl">
 
         <div class="wrapper">
             <div class="logo d-inline-flex align-items-center">
