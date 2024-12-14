@@ -85,6 +85,8 @@ return [
   'packages' => 'Packages',
   'Jeel_packge' => 'Jeel packages',
   'annual_subsc' => 'Annual subscription',
+  'monthly_subsc' => 'Monthly subscription',
+  'weekly_subsc' => 'Weekly subscription',
   'more' => 'More',
   'best_package' => 'The best package recommended',
   'choose_package' => 'Choose package',
@@ -95,6 +97,9 @@ return [
   'pay_method_3' => ' Pay with fawry ',
   'pay_method_4' => 'We pay',
   'pay_method_5' => 'Etisalat pay',
+  'EGP'=>'EGP',
+  'SAR'=>'SAR',
+  'USD'=>'USD',
   /**cONTACT US */
   'comunicate_with_us' => 'Contact us',
   'wish_communicate' => 'Do you wish to communicate ?',
@@ -127,10 +132,13 @@ return [
   'first_jeel_app' =>
     "The first Arabic application that creates a complete world of safe entertainment content for children. All the series, songs and fun games we provide are our original content designed by our creators according to a system of ethical standards developed by a team of educational experts, and in correct Arabic to enhance language skills. An English user interface is also available to enable our non-Arabic speaking users. We have also created a section for parents that provides useful follow-up tools because they are our primary partners in their children's learning journey.   ",
   'what_jeel_offer' => 'What Jeel offers to children and adolescents:',
-   'jeel_account'=>'The child has his own independent account in Jil; he will find all the types of content he is looking for and more in 6 sections: ',
-   'jeel_in_numbers'=>'Jeel in numbers',
-    'achive_1'=>' The Jeel app has all the ingredients that make it a successful educational platform with continued development and innovation, and statistics indicate that it is moving steadily towards becoming a leading educational platform for children in the Arab world.  ',
-    'our_partners'=>'Our partners',
-    'jeel_prize'=>'Jeel awards',
+  'jeel_account' =>
+    'The child has his own independent account in Jil; he will find all the types of content he is looking for and more in 6 sections: ',
+  'jeel_in_numbers' => 'Jeel in numbers',
+  'achive_1' =>
+    ' The Jeel app has all the ingredients that make it a successful educational platform with continued development and innovation, and statistics indicate that it is moving steadily towards becoming a leading educational platform for children in the Arab world.  ',
+  'our_partners' => 'Our partners',
+  'jeel_prize' => 'Jeel awards',
+  'terms_and_usage' => 'Terms and conditions',
 
 ];

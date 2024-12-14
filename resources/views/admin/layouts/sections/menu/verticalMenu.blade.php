@@ -54,6 +54,17 @@
 
     </li>
     <li class="menu-item ">
+      <a href="{{ url(app()->getLocale() .'/dashboard/translate') }}" class= "menu-link" >
+
+        <i class="menu-icon tf-icons mdi mdi-account-outline"></i>
+
+        <div>Translation</div>
+
+      </a>
+
+
+    </li>
+    <li class="menu-item ">
       <a href="{{ url(app()->getLocale() .'/dashboard') }}" class= "menu-link" >
 
         <i class="menu-icon tf-icons mdi mdi-message-outline"></i>

@@ -1,6 +1,6 @@
 @extends('admin/layouts/contentNavbarLayout')
 
-@section('title', 'Edit slider')
+@section('title', 'Add slider')
 
 @section('page-script')
 <script src="{{asset('assets/js/form-basic-inputs.js')}}"></script>
@@ -47,7 +47,7 @@
   <div class="col-md-12">
     <div class="card mb-4">
       <h5 class="card-header">Edit Slider</h5>
-      <form name="myForm" id="myForm" method="POST" action="{{ url(app()->getLocale() .'/dashboard/slider/update') }}" enctype="multipart/form-data">
+      <form name="myForm" id="myForm" method="POST" action="{{ url(app()->getLocale() .'/dashboard/slider/add') }}" enctype="multipart/form-data">
         <input type="hidden" name="slider_id" id="slider_id" value="{{$slider->id}}" />
         @csrf
       <div class="card-body demo-vertical-spacing demo-only-element">

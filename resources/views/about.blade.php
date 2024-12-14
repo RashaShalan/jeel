@@ -10,16 +10,14 @@
         </div>
         <div class="main-title">
           <div class="head">
-            العنوان الرئيسى <br>
-            لصفحة الهبوط لجيل
+           {{translatePhrase('aboutpage_title')}}
           </div>
           <p>
-            وريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل
-            وليس المحتوى) ويُستخدم في صناعات المطابع ودور النش
+           {{translatePhrase('aboutpage_txt')}}
           </p>
           <div class="action">
-            <button class="btn btn-primary">{{__('site.joinNow')}} </button>
-            <button class="btn btn-outlineprimary">{{__('site.download_app')}} </button>
+            <button class="btn btn-primary">{{translatePhrase('joinNow')}} </button>
+            <button class="btn btn-outlineprimary">{{translatePhrase('download_app')}} </button>
           </div>
         </div>
       </section>
@@ -32,31 +30,31 @@
             <div class="col-md-6">
               <div class="title__section">
                 <div class="subhaed text-blue mb-2">
-                  <span>{{__('site.jeel_exist')}}</span>
+                  <span>{{translatePhrase('jeel_exist')}}</span>
                 </div>
-                <div class="head text-primary">{{__('site.why_jeel_exist')}}</div>
+                <div class="head text-primary">{{translatePhrase('why_jeel_exist')}}</div>
               </div>
               <div class="main-text">
                 <p>
-                  {{__('site.monitor_content')}}
+                  {{translatePhrase('monitor_content')}}
                 </p>
               </div>
               <ul class="statistics">
                 <li>
                   <span class="num">01</span>
                   <p>
-                    <span class="proportion">98.9%</span>{{__('site.save_children')}}
+                    <span class="proportion">98.9%</span>{{translatePhrase('save_children')}}
                   </p>
                 </li>
                 <li>
                   <span class="num">02</span>
                   <p>
-                    <span class="proportion">{{__('site.One_from_ten')}}</span>
-                      {{__('site.unsafe_content')}}                  </p>
+                    <span class="proportion">{{translatePhrase('One_from_ten')}}</span>
+                      {{translatePhrase('unsafe_content')}}                  </p>
                 </li>
                 <li>
                   <span class="num">03</span>
-                  <p>{{__('site.arabic_content')}}
+                  <p>{{translatePhrase('arabic_content')}}
                   </p>
                 </li>
               </ul>
@@ -75,13 +73,13 @@
                     <p><span><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <circle cx="6.49648" cy="6.48257" r="5.77285" fill="#F39C28"/>
                         </svg>
-                       {{__('site.children_foregin_content')}}</span><span class="num">97%</span></p>
+                       {{translatePhrase('children_foregin_content')}}</span><span class="num">97%</span></p>
                   </div>
                   <div class="analyst">
                     <p><span><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <circle cx="6.49648" cy="6.33731" r="5.77285" fill="#53B0F3"/>
                         </svg>
-                        {{__('site.children_arabic_content')}}  </span><span class="num">3%</span></p>
+                        {{translatePhrase('children_arabic_content')}}  </span><span class="num">3%</span></p>
                   </div>
                 </div>
                 <div class="chart">
@@ -92,13 +90,13 @@
                     <p><span><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <circle cx="6.49648" cy="6.48257" r="5.77285" fill="#88115F"/>
                         </svg>
-                       {{__('site.child_porn')}}</span><span class="num">98.9%</span></p>
+                       {{translatePhrase('child_porn')}}</span><span class="num">98.9%</span></p>
                   </div>
                   <div class="analyst">
                     <p><span><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <circle cx="6.49648" cy="6.33731" r="5.77285" fill="#6765FE"/>
                         </svg>
-                        {{__('site.child_unporn')}}</span><span class="num">1.1%</span></p>
+                        {{translatePhrase('child_unporn')}}</span><span class="num">1.1%</span></p>
                   </div>
                 </div>
               </div>
@@ -118,7 +116,7 @@
                   <img src="{{ asset('front-assets/images/feature.png')}}" alt="">
                 </div>
                 <div class="head text-primary">
-                    {{__('site.secure_childern')}}
+                    {{translatePhrase('secure_childern')}}
                   </div>
                 <div class="mobile-banner">
                   <img src="{{ asset('front-assets/images/featuremob.png')}}" alt="">
@@ -128,12 +126,12 @@
             <div class="col">
               <div class="title__section">
                 <div class="subhaed text-blue mb-2">
-                  <span> {{__('site.mission')}} </span>
+                  <span> {{translatePhrase('mission')}} </span>
                 </div>
-                <div class="head text-primary">{{__('site.so_jeel_app')}}</div>
+                <div class="head text-primary">{{translatePhrase('so_jeel_app')}}</div>
                 <div class="main-text">
                   <p>
-                    {{__('site.first_jeel_app')}}
+                    {{translatePhrase('first_jeel_app')}}
                   </p>
                 </div>
               </div>
@@ -147,15 +145,15 @@
         <div class="container-xl">
           <div class="row text-center mb-section">
             <div class="title__section">
-              <div class="subhead text-primarydark mb-2"><span> {{__('site.parents')}} </span></div>
+              <div class="subhead text-primarydark mb-2"><span> {{translatePhrase('parents')}} </span></div>
               <div class="head text-blacklight">
-                {{__('site.what_jeel_offer')}}
+                {{translatePhrase('what_jeel_offer')}}
               </div>
 
             </div>
             <div class="main-text">
               <p>
-                {{__('site.jeel_account')}}
+                {{translatePhrase('jeel_account')}}
               </p>
             </div>
           </div>
@@ -166,7 +164,7 @@
                   <div class="icon-stats">
                     <img src="{{ asset('front-assets/images/kidsfeatureslg/series-item.svg')}}" alt="">
                   </div>
-                  <div class="main-title">{{__('site.feautre1')}}</div>
+                  <div class="main-title">{{translatePhrase('feautre1')}}</div>
                 </div>
               </div>
               <div class="item">
@@ -174,7 +172,7 @@
                   <div class="icon-stats">
                     <img src="{{ asset('front-assets/images/kidsfeatureslg/read-item.svg')}}" alt="">
                   </div>
-                  <div class="main-title">{{__('site.feautre2')}}  </div>
+                  <div class="main-title">{{translatePhrase('feautre2')}}  </div>
                 </div>
               </div>
               <div class="item">
@@ -182,7 +180,7 @@
                   <div class="icon-stats">
                     <img src="{{ asset('front-assets/images/kidsfeatureslg/teach-item.svg')}}" alt="">
                   </div>
-                  <div class="main-title">{{__('site.feautre4')}} </div>
+                  <div class="main-title">{{translatePhrase('feautre4')}} </div>
                 </div>
               </div>
 
@@ -191,7 +189,7 @@
                   <div class="icon-stats">
                     <img src="{{ asset('front-assets/images/kidsfeatureslg/games-item.svg')}}" alt="">
                   </div>
-                  <div class="main-title"> {{__('site.feautre5')}}</div>
+                  <div class="main-title"> {{translatePhrase('feautre5')}}</div>
                 </div>
               </div>
               <div class="item">
@@ -199,7 +197,7 @@
                   <div class="icon-stats">
                     <img src="{{ asset('front-assets/images/kidsfeatureslg/radio-item.svg')}}" alt="">
                   </div>
-                  <div class="main-title">{{__('site.feautre3')}} </div>
+                  <div class="main-title">{{translatePhrase('feautre3')}} </div>
                 </div>
               </div>
               <div class="item">
@@ -207,7 +205,7 @@
                   <div class="icon-stats">
                     <img src="{{ asset('front-assets/images/kidsfeatureslg/song-item.svg')}}" alt="">
                   </div>
-                  <div class="main-title">{{__('site.feautre6')}} </div>
+                  <div class="main-title">{{translatePhrase('feautre6')}} </div>
                 </div>
 
               </div>
@@ -228,14 +226,13 @@
             <div class="col-12">
               <div class="title__section text-center">
                 <div class="subhaed text-blue mb-2">
-                  <span> {{__('site.parents')}} </span>
+                  <span> {{translatePhrase('parents')}} </span>
                 </div>
-                <div class="head text-primary mb-2">  {{__('site.Jeel_offers_parents')}} </div>
+                <div class="head text-primary mb-2">  {{translatePhrase('Jeel_offers_parents')}} </div>
               </div>
               <div class="main-text mb-section">
                 <p class="col-md-8 mx-auto text-center">
-                  وريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي (بمعنى أن الغاية هي
-                  الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النش
+                  {{translatePhrase('Jeel_offers_parents_text')}}
                 </p>
               </div>
             </div>
@@ -251,13 +248,13 @@
                 </div>
                 <div class="col-md-6">
                   <div class="details">
-                    <div class="h1">  {{__('site.details_reports')}}</div>
+                    <div class="h1">  {{translatePhrase('details_reports')}}</div>
                     <ul>
                       <li>
-                        {{__('site.report_item_1')}}
+                        {{translatePhrase('report_item_1')}}
                                             </li>
                       <li>
-                        {{__('site.report_item_2')}}                      </li>
+                        {{translatePhrase('report_item_2')}}                      </li>
                     </ul>
                   </div>
                 </div>
@@ -267,15 +264,15 @@
 
                 <div class="col-md-6">
                   <div class="details">
-                    <div class="h1">{{__('site.Jasor_dept')}} </div>
+                    <div class="h1">{{translatePhrase('Jasor_dept')}} </div>
                     <ul>
                       <li>
-                        {{__('site.dept_item_1')}}                      </li>
+                        {{translatePhrase('dept_item_1')}}                      </li>
                       <li>
-                        {{__('site.dept_item_2')}}
+                        {{translatePhrase('dept_item_2')}}
                       </li>
                       <li>
-                        {{__('site.dept_item_3')}}                      </li>
+                        {{translatePhrase('dept_item_3')}}                      </li>
                     </ul>
                   </div>
                 </div>
@@ -300,9 +297,9 @@
                 </div>
                 <div class="col-md-6">
                   <div class="details">
-                    <div class="h1">{{__('site.accounts_in_one')}} </div>
+                    <div class="h1">{{translatePhrase('accounts_in_one')}} </div>
                     <ul>
-                      <li>{{__('site.account_item_1')}}</li>
+                      <li>{{translatePhrase('account_item_1')}}</li>
                     </ul>
                   </div>
                 </div>
@@ -311,9 +308,9 @@
               <div class="row flex-column-reverse flex-md-row">
                 <div class="col-md-6">
                   <div class="details">
-                    <div class="h1"> {{__('site.music_or_not')}} </div>
+                    <div class="h1"> {{translatePhrase('music_or_not')}} </div>
                     <ul>
-                      <li>{{__('site.music_item_1')}}</li>
+                      <li>{{translatePhrase('music_item_1')}}</li>
                     </ul>
                   </div>
                 </div>
@@ -336,15 +333,15 @@
         <div class="container-xl">
           <div class="row">
             <div class="title__section text-center">
-              <div class="subhead text-blue mb-2"><span>{{_('site.jeel_achieve')}}</span></div>
+              <div class="subhead text-blue mb-2"><span>{{translatePhrase('jeel_achieve')}}</span></div>
               <div class="head text-primary">
-                {{__('site.jeel_in_numbers')}}
+                {{translatePhrase('jeel_in_numbers')}}
               </div>
 
             </div>
             <div class="main-text">
               <p class="col-md-9 mx-auto">
-                    {{__('site.achive_1')}}              </p>
+                    {{translatePhrase('achive_1')}}              </p>
             </div>
           </div>
 
@@ -357,7 +354,7 @@
                 </div>
                 <div class="desc-stats text-center">
                   <span class="num-stats">+2M</span>
-                  <span> {{__('site.download_process')}}</span>
+                  <span> {{translatePhrase('download_process')}}</span>
                 </div>
 
               </div>
@@ -367,7 +364,7 @@
                 </div>
                 <div class="desc-stats text-center">
                   <span class="num-stats"> +57 </span>
-                  <span> {{__('site.country_with_users')}}   </span>
+                  <span> {{translatePhrase('country_with_users')}}   </span>
                 </div>
 
               </div>
@@ -377,7 +374,7 @@
                 </div>
                 <div class="desc-stats text-center">
                   <span class="num-stats">+300K</span>
-                  <span>  {{__('site.subscribe_of_app')}}</span>
+                  <span>  {{translatePhrase('subscribe_of_app')}}</span>
                 </div>
 
               </div>
@@ -387,7 +384,7 @@
                 </div>
                 <div class="desc-stats text-center">
                   <span class="num-stats"> +500 </span>
-                  <span> {{__('site.episode_to_watch')}}  </span>
+                  <span> {{translatePhrase('episode_to_watch')}}  </span>
                 </div>
 
               </div>
@@ -397,7 +394,7 @@
                 </div>
                 <div class="desc-stats text-center">
                   <span class="num-stats"> +1000 </span>
-                  <span> {{__('site.exclusive_character')}}  </span>
+                  <span> {{translatePhrase('exclusive_character')}}  </span>
                 </div>
 
               </div>
@@ -407,7 +404,7 @@
                 </div>
                 <div class="desc-stats text-center">
                   <span class="num-stats"> +10 </span>
-                  <span>  {{__('site.years_of_experience')}} </span>
+                  <span>  {{translatePhrase('years_of_experience')}} </span>
                 </div>
 
               </div>
@@ -423,8 +420,8 @@
         <div class="container-xl">
           <div class="row">
             <div class="title__section text-center">
-              <div class="subhead text-blue mb-2"><span>{{__('site.our_partners')}}</span></div>
-              <div class="head text-primary">{{__('site.jeel_prize')}}</div>
+              <div class="subhead text-blue mb-2"><span>{{translatePhrase('our_partners')}}</span></div>
+              <div class="head text-primary">{{translatePhrase('jeel_prize')}}</div>
             </div>
           </div>
         </div>
@@ -491,13 +488,12 @@
         <div class="container-xl">
           <div class="row">
             <div class="title__section text-center">
-              <div class="subhaed text-blue mb-2"><span>{{__('site.Testomnials')}}</span></div>
-              <div class="head text-primary"> {{__('site.jeel_testomnials')}} </div>
+              <div class="subhaed text-blue mb-2"><span>{{translatePhrase('Testomnials')}}</span></div>
+              <div class="head text-primary"> {{translatePhrase('jeel_testomnials')}} </div>
             </div>
             <div class="main-text">
               <p class="col-md-8 mx-auto text-center">
-                وريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي (بمعنى أن الغاية هي
-                الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النش
+                {{translatePhrase('jeel_testomnials_text')}}
               </p>
             </div>
           </div>
@@ -508,13 +504,13 @@
             </div>
 
             <div class="descripe">
-              <h2 class="text-primary mb-4">“{{__('site.testomnial_1')}}“</h2>
+              <h2 class="text-primary mb-4">“{{translatePhrase('testomnial_1')}}“</h2>
 
               <div class="person-details">
                 <img src="{{ asset('front-assets/images/quote-ico.svg')}}">
                 <div class="mx-3">
-                  <h4>{{__('sitetestomnial_user_1')}} </h4>
-                  <h5> {{__('testomnial_user_1_info')}} </h5>
+                  <h4>{{translatePhrase('testomnial_user_1')}} </h4>
+                  <h5> {{translatePhrase('testomnial_user_1_info')}} </h5>
                 </div>
               </div>
             </div>
@@ -534,15 +530,15 @@
                 <div class="txt">
                   <div class="heading">
 
-                    <p class="mb-0">  {{__('site.ready_education')}} </p>
-                    <p class="mb-0">     {{__('site.fun_safe')}}</p>
+                    <p class="mb-0">  {{translatePhrase('ready_education')}} </p>
+                    <p class="mb-0">     {{translatePhrase('fun_safe')}}</p>
 
 
                   </div>
 
 
                   <h2>
-                    {{__('site.app_avaliable')}}
+                    {{translatePhrase('app_avaliable')}}
                   </h2>
 
                   <div class="download-links">

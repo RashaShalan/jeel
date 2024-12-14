@@ -8,6 +8,7 @@ use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\App;
 
+use App\Models\translate;
 
 /**
  * Upload Files
@@ -19,49 +20,43 @@ use Illuminate\Support\Facades\App;
  */
 
 if (!function_exists('UploadFiles')) {
+  function UploadFiles($path, $image, $model, $request)
+  {
+    $thumbnail = $request;
+    $destinationPath = $path;
+    $filerealname = $thumbnail->getClientOriginalName();
+    $filename = $model->id . time() . '.' . $thumbnail->getClientOriginalExtension();
+    $thumbnail->move($destinationPath, $filename);
 
-    function UploadFiles($path, $image, $model, $request)
-    {
+    $model->$image = asset($path) . '/' . $filename;
 
-        $thumbnail = $request;
-        $destinationPath = $path;
-        $filerealname = $thumbnail->getClientOriginalName();
-        $filename = $model->id . time() . '.' . $thumbnail->getClientOriginalExtension();
-        $thumbnail->move($destinationPath, $filename);
-
-        $model->$image = asset($path) . '/' . $filename;
-
-        $model->save();
-    }
+    $model->save();
+  }
 }
 function generateUniqueNumber($counter)
 {
+  //static $counter = 0 ; // Static variable to keep track of the counter
+  $today = Carbon::today();
+  $year = $today->year;
+  $month = sprintf('%02d', $today->month); // Add leading zero if month is less than 10
+  $day = sprintf('%02d', $today->day); // Add leading zero if day is less than 10
 
-    //static $counter = 0 ; // Static variable to keep track of the counter
-    $today = Carbon::today();
-    $year = $today->year;
-    $month = sprintf("%02d", $today->month); // Add leading zero if month is less than 10
-    $day = sprintf("%02d", $today->day); // Add leading zero if day is less than 10
+  $formattedDate = $year . '-' . $month . $day;
+  // Increment the counter
 
-    $formattedDate = $year . '-' . $month . $day;
-    // Increment the counter
+  $incrementedCounter = str_pad($counter + 1, 4, '0', STR_PAD_LEFT);
+  //dd($incrementedCounter);
+  //$incrementedCounter++;
+  $formattedNumber = $formattedDate . '-' . $incrementedCounter;
 
-    $incrementedCounter = str_pad($counter + 1, 4, '0', STR_PAD_LEFT);
-    //dd($incrementedCounter);
-    //$incrementedCounter++;
-    $formattedNumber = $formattedDate . '-' . $incrementedCounter;
-
-    return ['formattedNumber' => $formattedNumber, 'counter' => $counter + 1];
+  return ['formattedNumber' => $formattedNumber, 'counter' => $counter + 1];
 }
 
-
-
-function convertToArabicNumerals($number)
+function translatePhrase($string)
 {
-    $westernArabicNumerals = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-    $easternArabicNumerals = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
+  $data = translate::where('string', $string)
+    ->Select('title_' . app()->getLocale() . ' as title')
+    ->first();
 
-    return str_replace($westernArabicNumerals, $easternArabicNumerals, $number);
+  return $data->title ?? null;
 }
-
-

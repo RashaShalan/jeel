@@ -9,6 +9,7 @@ use App\Http\Controllers\admin\authentications\RegisterBasic;
 use App\Http\Controllers\admin\authentications\ForgotPasswordBasic;
 use App\Http\Controllers\admin\SliderController;
 use App\Http\Controllers\admin\SocialController;
+use App\Http\Controllers\admin\translateController;
 
 Route::prefix('{locale?}')
   ->middleware('setLocale')
@@ -20,8 +21,8 @@ Route::prefix('{locale?}')
     Route::get('/Jeel-questions', [HomeController::class, 'questions'])->name('jeelQuestions');
     Route::get('/Contact-us', [HomeController::class, 'contact_us'])->name('Contact_us');
     Route::post('/send_contact', [HomeController::class, 'send_contact_us'])->name('send_contact');
+    Route::get('/Terms-and-conditions', [HomeController::class, 'terms_conditions'])->name('Terms-and-conditions');
 
-    
     /**
      * Dasnboard
      */
@@ -50,7 +51,18 @@ Route::prefix('{locale?}')
         /**Socail */
         Route::any('/social', [SocialController::class, 'index']);
         Route::any('/social/add', [SocialController::class, 'store']);
+        /**Translate */
+        Route::any('/translate', [translateController::class, 'index'])->name('translate.index');
 
+        Route::any('/translate/create', [translateController::class, 'create']);
+
+        Route::any('/translate/add', [translateController::class, 'store']);
+        Route::any('/translate/get', [translateController::class, 'show']);
+        Route::get('/translate/edit', [translateController::class, 'edit']);
+
+        Route::post('/translate/update', [translateController::class, 'update']);
+        Route::any('/translate/delete', [translateController::class, 'destroy']);
+        Route::any('/translate/getData', [translateController::class, 'getDataInfo'])->name('translate.getData');
       }
     );
 

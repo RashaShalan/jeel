@@ -6,12 +6,14 @@ use Illuminate\Http\Request;
 use App\Models\slider;
 use App\Models\social_links;
 use App\Models\contact_us;
+use App\Models\terms;
 
 class HomeController extends Controller
 {
   //
-  public function index()
+  public function index(Request $request)
   {
+    // dd($request->cookie('countryCode'));
     $sliders = Slider::all();
     $social = social_links::first();
     return view('homepage', compact('sliders', 'social'));
@@ -50,6 +52,14 @@ class HomeController extends Controller
   {
     $social = social_links::first();
 
-    return view('contact' ,compact( 'social'));
+    return view('contact', compact('social'));
+  }
+
+  public function terms_conditions()
+  {
+    $terms = terms::first();
+
+    // dd($terms);
+    return view('terms', compact('terms'));
   }
 }

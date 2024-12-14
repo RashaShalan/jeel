@@ -28,8 +28,8 @@
                                     @endif
                                   </p>
                                   <div class="action">
-                                      <button class="btn btn-primary">{{__('site.joinNow')}}</button>
-                                      <button class="btn btn-outlineprimary">{{__('site.download_app')}}</button>
+                                      <button class="btn btn-primary">{{translatePhrase('joinNow')}}</button>
+                                      <button class="btn btn-outlineprimary">{{translatePhrase('download_app')}}</button>
                                   </div>
                               </div>
                           </div>
@@ -101,17 +101,17 @@
                       </div>
                       <div class="col-md-5 px-0">
                           <div class="title__section">
-                              <div class="subhead text-primarydark mb-2"><span>  {{__('site.About_us')}} </span></div>
-                              <div class="head text-primary">{{__('site.WhatJeelApp')}}</div>
+                              <div class="subhead text-primarydark mb-2"><span>  {{translatePhrase('About_us')}} </span></div>
+                              <div class="head text-primary">{{translatePhrase('WhatJeelApp')}}</div>
                           </div>
                           <div class="main-text">
                               <p>
-                                 {{__('site.WhatJeelAnswer')}}.
+                                 {{translatePhrase('WhatJeelAnswer')}}.
                               </p>
                           </div>
                           <div class="btns-action">
-                              <button class="btn btn-primary"> {{__('site.download_app')}}</button>
-                              <button class="btn btn-outlineprimary mx-3">{{__('site.Achievement')}} </button>
+                              <button class="btn btn-primary"> {{translatePhrase('download_app')}}</button>
+                              <button class="btn btn-outlineprimary mx-3">{{translatePhrase('Achievement')}} </button>
                           </div>
                       </div>
                   </div>
@@ -122,8 +122,8 @@
           <section class="clients-section mb-section py-section">
               <div class="container-xl">
                   <div class="title__section text-center">
-                      <div class="subhead text-primarydark mb-2"><span> {{__('site.Partnerships')}} </span></div>
-                      <div class="head text-blacklight">{{__('site.TrustJeel')}}
+                      <div class="subhead text-primarydark mb-2"><span> {{translatePhrase('Partnerships')}} </span></div>
+                      <div class="head text-blacklight">{{translatePhrase('TrustJeel')}}
                       </div>
                   </div>
                   <div class="content__section">
@@ -156,22 +156,22 @@
               <div class="container-xl">
                   <div class="row">
                       <div class="title__section text-center">
-                          <div class="subhead mb-2"><span> {{__('site.Achievement')}}</span></div>
+                          <div class="subhead mb-2"><span> {{translatePhrase('Achievement')}}</span></div>
                           <div class="head text-primary">
-                            {{__('site.Achievement')}}
+                            {{translatePhrase('Achievement')}}
                           </div>
 
                       </div>
                       <div class="main-text">
                           <p class="col-md-9 mx-auto">
-                            {{__('site.achive_text')}}
+                            {{translatePhrase('achive_text')}}
                           </p>
                       </div>
                   </div>
 
 
                   <div class="content__section sm-template">
-                      <div class="head text-white text-center mb-4"> {{__('site.jeel_achieve')}}</div>
+                      <div class="head text-white text-center mb-4"> {{translatePhrase('jeel_achieve')}}</div>
 
                       <div class="d-flex flex-wrap justify-content-between align-items-center">
                           <div class="stats-item">
@@ -180,7 +180,7 @@
                               </div>
                               <div class="desc-stats text-center">
                                   <span class="num-stats">+2M</span>
-                                  <span>{{__('site.download_process')}}</span>
+                                  <span>{{translatePhrase('download_process')}}</span>
                               </div>
 
                           </div>
@@ -190,7 +190,7 @@
                               </div>
                               <div class="desc-stats text-center">
                                   <span class="num-stats"> +57 </span>
-                                  <span>{{__('site.country_with_users')}}</span>
+                                  <span>{{translatePhrase('country_with_users')}}</span>
                               </div>
 
                           </div>
@@ -200,7 +200,7 @@
                               </div>
                               <div class="desc-stats text-center">
                                   <span class="num-stats">+300K</span>
-                                  <span> {{__('site.subscribe_of_app')}}</span>
+                                  <span> {{translatePhrase('subscribe_of_app')}}</span>
                               </div>
 
                           </div>
@@ -210,7 +210,7 @@
                               </div>
                               <div class="desc-stats text-center">
                                   <span class="num-stats"> +500 </span>
-                                  <span>{{__('site.episode_to_watch')}} </span>
+                                  <span>{{translatePhrase('episode_to_watch')}} </span>
                               </div>
 
                           </div>
@@ -220,7 +220,7 @@
                               </div>
                               <div class="desc-stats text-center">
                                   <span class="num-stats"> +1000 </span>
-                                  <span>{{__('site.exclusive_character')}}</span>
+                                  <span>{{translatePhrase('exclusive_character')}}</span>
                               </div>
 
                           </div>
@@ -230,7 +230,7 @@
                               </div>
                               <div class="desc-stats text-center">
                                   <span class="num-stats"> +10 </span>
-                                  <span>{{__('site.years_of_experience')}}</span>
+                                  <span>{{translatePhrase('years_of_experience')}}</span>
                               </div>
 
                           </div>
@@ -253,7 +253,7 @@
                               <img src="{{ asset('front-assets/images/companies/huaw-logo.svg')}}" alt="">
 
                           </div>
-                          <p>{{__('site.best_10')}}</p>
+                          <p>{{translatePhrase('best_10')}}</p>
                       </div>
 
                   </div>
@@ -265,7 +265,7 @@
 
                           </div>
                           <p>
-                              {{__('site.IQ_holon')}}
+                              {{translatePhrase('IQ_holon')}}
                           </p>
                       </div>
 
@@ -277,7 +277,7 @@
                               <img src="{{ asset('front-assets/images/companies/takeoff-logo.svg')}}" alt="">
 
                           </div>
-                          <p>{{__('site.istanbul_take_off')}}</p>
+                          <p>{{translatePhrase('istanbul_take_off')}}</p>
                       </div>
 
                   </div>
@@ -288,7 +288,7 @@
                               <img src="{{ asset('front-assets/images/companies/kiw-logo.svg')}}" alt="">
 
                           </div>
-                          <p>{{__('site.Kiwitik_participate')}}</p></p>
+                          <p>{{translatePhrase('Kiwitik_participate')}}</p></p>
                       </div>
 
                   </div>
@@ -299,7 +299,7 @@
                               <img src="{{ asset('front-assets/images/companies/tech-logo.svg')}}" alt="">
 
                           </div>
-                          <p>{{__('site.Techne_summit')}}</p>
+                          <p>{{translatePhrase('Techne_summit')}}</p>
                       </div>
 
                   </div>
@@ -310,7 +310,7 @@
                               <img src="{{ asset('front-assets/images/companies//esc-logo.svg')}}" alt="">
 
                           </div>
-                          <p> {{__('site.escew_prize')}}</p>
+                          <p> {{translatePhrase('escew_prize')}}</p>
                       </div>
 
                   </div>
@@ -325,14 +325,14 @@
               <div class="row flex-column-reverse flex-md-row">
                   <div class="col-md-6">
                       <div class="title__section">
-                          <div class="subhead text-primarydark mb-2"><span> {{__('site.features')}} </span></div>
+                          <div class="subhead text-primarydark mb-2"><span> {{translatePhrase('features')}} </span></div>
                           <div class="head text-blacklight">
-                               {{__('site.Achievement')}}
+                               {{translatePhrase('Achievement')}}
                           </div>
 
                       </div>
                       <div class="main-text">
-                          <p>{{__('site.child_independent_account')}}
+                          <p>{{translatePhrase('child_independent_account')}}
                           </p>
                       </div>
 
@@ -340,42 +340,42 @@
                           <div class="feature-item">
                               <i>
                                   <img src="{{ asset('front-assets/images/kidsfeature/seriesicon.svg')}}">
-                              </i>  {{__('site.feautre1')}}
+                              </i>  {{translatePhrase('feautre1')}}
 
 
                           </div>
                           <div class="feature-item">
                               <i>
                                   <img src="{{ asset('front-assets/images/kidsfeature/readicon.svg')}}">
-                              </i> {{__('site.feautre2')}}
+                              </i> {{translatePhrase('feautre2')}}
 
 
                           </div>
                           <div class="feature-item">
                               <i>
                                   <img src="{{ asset('front-assets/images/kidsfeature/radioicon.svg')}}">
-                              </i>  {{__('site.feautre3')}}
+                              </i>  {{translatePhrase('feautre3')}}
 
 
                           </div>
                           <div class="feature-item">
                               <i>
                                   <img src="{{ asset('front-assets/images/kidsfeature/teachicon.svg')}}">
-                              </i>  {{__('site.feautre4')}}
+                              </i>  {{translatePhrase('feautre4')}}
 
 
                           </div>
                           <div class="feature-item">
                               <i>
                                   <img src="{{ asset('front-assets/images/kidsfeature/gamesicon.svg')}}">
-                              </i>  {{__('site.feautre5')}}
+                              </i>  {{translatePhrase('feautre5')}}
 
 
                           </div>
                           <div class="feature-item">
                               <i>
                                   <img src="{{ asset('front-assets/images/kidsfeature/readicon.svg')}}">
-                              </i>  {{__('site.feautre6')}}
+                              </i>  {{translatePhrase('feautre6')}}
 
 
                           </div>
@@ -385,7 +385,7 @@
                       <div class="g-imge">
                           <div class="img-1 s-icon">
                               <div class="slides-title">
-                                {{__('site.what_we_offer')}}
+                                {{translatePhrase('what_we_offer')}}
                               </div>
                               <div class="slider-feature w-100">
                                   <ul id="sliderfeatures">
@@ -462,15 +462,14 @@
           <div class="container-xl">
               <div class="row">
                   <div class="title__section text-center">
-                      <div class="subhead text-primarydark mb-2"><span> {{__('site.parents')}} </span></div>
+                      <div class="subhead text-primarydark mb-2"><span> {{translatePhrase('parents')}} </span></div>
                       <div class="head text-blacklight">
-                         {{__('site.Jeel_offers_parents')}}
+                         {{translatePhrase('Jeel_offers_parents')}}
                       </div>
                   </div>
                   <div class="main-text">
                       <p class="col-md-8 mx-auto text-center">
-                          وريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى)
-                          ويُستخدم في صناعات المطابع ودور النش
+                        {{translatePhrase('Jeel_offers_parents_text')}}
                       </p>
                   </div>
               </div>
@@ -484,13 +483,13 @@
                           </video>
                       </div>
                       <div class="main-description">
-                          <h4>{{__('site.details_reports')}}</h4>
+                          <h4>{{translatePhrase('details_reports')}}</h4>
                           <ul>
                               <li>
-                                {{__('site.report_item_1')}}
+                                {{translatePhrase('report_item_1')}}
                               </li>
                               <li>
-                                {{__('site.report_item_2')}}
+                                {{translatePhrase('report_item_2')}}
                               </li>
                           </ul>
 
@@ -505,17 +504,17 @@
                           </video>
                       </div>
                       <div class="main-description">
-                          <h4>{{__('site.Jasor_dept')}}</h4>
+                          <h4>{{translatePhrase('Jasor_dept')}}</h4>
                           <ul>
                               <li>
-                                  {{__('site.dept_item_1')}}
+                                  {{translatePhrase('dept_item_1')}}
 
                               </li>
                               <li>
-                                {{__('site.dept_item_2')}}
+                                {{translatePhrase('dept_item_2')}}
                               </li>
                               <li>
-                                {{__('site.dept_item_3')}}                              </li>
+                                {{translatePhrase('dept_item_3')}}                              </li>
                           </ul>
 
                       </div>
@@ -528,14 +527,14 @@
                           </video>
                       </div>
                       <div class="main-description">
-                          <h4>{{__('site.accounts_in_one')}}</h4>
+                          <h4>{{translatePhrase('accounts_in_one')}}</h4>
                           <ul>
                               <li>
-                                {{__('site.account_item_1')}}
+                                {{translatePhrase('account_item_1')}}
 
                               </li>
                               <li>
-                                  {{__('site.account_item_2')}}
+                                  {{translatePhrase('account_item_2')}}
                               </li>
                           </ul>
 
@@ -550,10 +549,10 @@
                           </video>
                       </div>
                       <div class="main-description">
-                          <h4>{{__('site.music_or_not')}}</h4>
+                          <h4>{{translatePhrase('music_or_not')}}</h4>
                           <ul>
                               <li>
-                                 {{__('site.music_item_1')}}
+                                 {{translatePhrase('music_item_1')}}
                               </li>
                           </ul>
                       </div>
@@ -575,29 +574,29 @@
                           <div class="txt">
                               <div class="heading">
 
-                                  <p class="mb-0">{{__('site.ready_education')}}</p>
-                                  <p class="mb-0"> {{__('site.fun_safe')}}</p>
+                                  <p class="mb-0">{{translatePhrase('ready_education')}}</p>
+                                  <p class="mb-0"> {{translatePhrase('fun_safe')}}</p>
 
 
                               </div>
 
 
                               <h2>
-                                 {{__('site.app_avaliable')}}
+                                 {{translatePhrase('app_avaliable')}}
                               </h2>
 
                               <div class="download-links">
 
                                   <div class="two-btns">
-                                      <a href="javascript:;"><img src="{{ asset('front-assets/images/webapp.svg')}}"></a>
-                                      <a href="javascript:;"><img src="{{ asset('front-assets/images/appstore.svg')}}"></a>
+                                      <a href="https://web.jeelapp.com/#/register-add-extra-info" target="_blank"><img src="{{ asset('front-assets/images/webapp.svg')}}"></a>
+                                      <a href="https://apps.apple.com/us/app/jeel-%D8%AC%D9%8A%D9%84/id1489596085" target="_blank"><img src="{{ asset('front-assets/images/appstore.svg')}}"></a>
 
                                   </div>
 
                                   <div class="two-btns">
-                                      <a href="javascript:;"><img src="{{ asset('front-assets/images/googleplay.svg')}}"></a>
+                                      <a href="https://play.google.com/store/apps/details?id=com.jeelapp.android" target="_blank"><img src="{{ asset('front-assets/images/googleplay.svg')}}"></a>
 
-                                      <a href="javascript:;"><img src="{{ asset('front-assets/images/appgallery.svg')}}"></a>
+                                      <a href="https://appgallery.huawei.com/app/C103389579" target="_blank"><img src="{{ asset('front-assets/images/appgallery.svg')}}"></a>
                                   </div>
 
                               </div>
@@ -620,17 +619,17 @@
       </section>
       <!--==============================End CTA Section ==============================-->
       <!--==============================Start Testimonial Section ==============================-->
-      <section class="testimonial-section mb-section py-section">
+      <section class="testimonial-section mb-section py-section" style="display: none;">
           <div class="container-xl">
               <div class="row">
                   <div class="title__section text-center">
-                      <div class="subhaed text-blue mb-2"><span>{{__('site.Testomnials')}}</span></div>
-                      <div class="head text-primary">{{__('site.jeel_testomnials')}}</div>
+                      <div class="subhaed text-blue mb-2"><span>{{translatePhrase('Testomnials')}}</span></div>
+                      <div class="head text-primary">{{translatePhrase('jeel_testomnials')}}</div>
                   </div>
                   <div class="main-text">
                       <p class="col-md-8 mx-auto text-center">
-                          وريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي (بمعنى أن الغاية هي
-                          الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النش
+                        {{translatePhrase('jeel_testomnials_text')}}
+
                       </p>
                   </div>
               </div>
@@ -641,13 +640,13 @@
                   </div>
 
                   <div class="descripe">
-                      <h2 class="text-primary mb-4">“{{__('site.testomnial_1')}}”</h2>
+                      <h2 class="text-primary mb-4">“{{translatePhrase('testomnial_1')}}”</h2>
 
                       <div class="person-details">
                           <img src="{{ asset('front-assets/images/quote-ico.svg')}}">
                           <div class="mx-3">
-                              <h4>{{__('site.testomnial_user_1')}}</h4>
-                              <h5>{{__('site.testomnial_user_1_info')}}</h5>
+                              <h4>{{translatePhrase('testomnial_user_1')}}</h4>
+                              <h5>{{translatePhrase('testomnial_user_1_info')}}</h5>
                           </div>
                       </div>
                   </div>
@@ -661,81 +660,79 @@
           <div class="container-xl">
               <div class="row">
                   <div class="title__section text-center mb-3">
-                      <div class="subhaed text-primarydark mb-2"><span>{{__('site.packages')}}</span></div>
-                      <div class="head text-blacklight">{{__('site.Jeel_packge')}}</div>
+                      <div class="subhaed text-primarydark mb-2"><span>{{translatePhrase('packages')}}</span></div>
+                      <div class="head text-blacklight">{{translatePhrase('Jeel_packge')}}</div>
 
                   </div>
                   <p class="col-md-8 main-text mx-auto text-center">
-                      وريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى)
-                      ويُستخدم في
-                      صناعات المطابع ودور النش
+                    {{translatePhrase('Jeel_packge_text')}}
                   </p>
               </div>
               <div class="buying-card text-center">
                   <div class="row">
                       <div class="col">
-                          <div class="card-price">
+                          <div class="card-price weekly">
                               <div class="icon">
                                   <img src="{{ asset('front-assets/images/pricing-icon.svg')}}" alt="">
                               </div>
                               <div class="main-title">
-                                  <h2>{{__('site.annual_subsc')}}</h2>
-                                  <p>{{__('site.best_package')}}</p>
+                                  <h2>{{translatePhrase('weekly_subsc')}}</h2>
+                                  <p>{{translatePhrase('best_package')}}</p>
                               </div>
                               <div class="price">
                                   <span>649.99 ج.م</span>
                               </div>
                               <div class="action">
                                   <button class="btn">
-                                     {{__('site.choose_package')}}
+                                     {{translatePhrase('choose_package')}}
                                   </button>
                               </div>
                               <div class="more">
-                                <a href="#">{{__('site.more')}}</a>
+                                <a href="#">{{translatePhrase('more')}}</a>
                               </div>
                           </div>
                       </div>
                       <div class="col">
-                          <div class="card-price">
+                          <div class="card-price monthly">
                               <div class="icon">
                                   <img src="{{ asset('front-assets/images/pricing-icon.svg')}}" alt="">
                               </div>
                               <div class="main-title">
-                                  <h2> {{__('site.annual_subsc')}}</h2>
-                                  <p>{{__('site.best_package')}}</p>
+                                  <h2> {{translatePhrase('monthly_subsc')}}</h2>
+                                  <p>{{translatePhrase('best_package')}}</p>
                               </div>
                               <div class="price">
                                   <span>649.99 ج.م</span>
                               </div>
                               <div class="action">
                                   <button class="btn">
-                                     {{__('site.choose_package')}}
+                                     {{translatePhrase('choose_package')}}
                                   </button>
                               </div>
                               <div class="more">
-                                <a href="#">{{__('site.more')}}</a>
+                                <a href="#">{{translatePhrase('more')}}</a>
                               </div>
                           </div>
                       </div>
                       <div class="col">
-                          <div class="card-price">
+                          <div class="card-price annualy">
                               <div class="icon">
                                   <img src="{{ asset('front-assets/images/pricing-icon.svg')}}" alt="">
                               </div>
                               <div class="main-title">
-                                  <h2> {{__('site.annual_subsc')}}</h2>
-                                  <p>{{__('site.best_package')}}</p>
+                                  <h2> {{translatePhrase('annual_subsc')}}</h2>
+                                  <p>{{translatePhrase('best_package')}}</p>
                               </div>
                               <div class="price">
                                   <span>649.99 ج.م</span>
                               </div>
                               <div class="action">
                                   <button class="btn">
-                                     {{__('site.choose_package')}}
+                                     {{translatePhrase('choose_package')}}
                                   </button>
                               </div>
                               <div class="more">
-                                  <a href="#">{{__('site.more')}}</a>
+                                  <a href="#">{{translatePhrase('more')}}</a>
                               </div>
                           </div>
                       </div>
@@ -744,7 +741,7 @@
               <div class="pay">
                   <div class="row">
                       <div class="h-pay d-flex justify-content-between align-items-center">
-                          <span class="how-pay">{{__('site.payment_method')}}</span>
+                          <span class="how-pay">{{translatePhrase('payment_method')}}</span>
                           <span class="have-account">
                               <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                                   <path d="M2.68896 17.3436H25.1466" stroke="#4F0F4B" stroke-width="1.98155" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -753,61 +750,65 @@
                                   <path d="M6.9834 24.2134H9.25684" stroke="#4F0F4B" stroke-width="1.98155" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                   <path d="M12.0796 24.2134H16.625" stroke="#4F0F4B" stroke-width="1.98155" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                               </svg>
-                             {{__('site.pre_paid')}}
+                             {{translatePhrase('pre_paid')}}
                           </span>
                       </div>
                   </div>
                   <div class="row flex-wrap justify-content-center">
-                      <div class="col-pay">
+
+                   {{--     <div class="col-pay E-WALLET">
                           <div class="pay-card text-center">
                               <div class="icon">
                                   <img src="{{ asset('front-assets/images/ewallet-icon.svg')}}" alt="">
                               </div>
                               <div class="main-title">
-                                 {{__('site.pay_method_1')}}
+                                 {{translatePhrase('pay_method_1')}}
                               </div>
                           </div>
-                      </div>
-                      <div class="col-pay">
+                      </div> --}}
+
+                      <div class="col-pay mastercard">
                           <div class="pay-card text-center">
                               <div class="icon">
                                   <img src="{{ asset('front-assets/images/mastercard-icon.svg')}}" alt="">
                               </div>
                               <div class="main-title">
-                                {{__('site.pay_method_2')}}
+                                {{translatePhrase('pay_method_2')}}
                               </div>
                           </div>
                       </div>
-                      <div class="col-pay">
+                      @if(Cookie::get('countryName')=='Egypt')
+                      <div class="col-pay FAWRY">
                           <div class="pay-card text-center">
                               <div class="icon">
                                   <img src="{{ asset('front-assets/images/fawry-icon.svg')}}" alt="">
                               </div>
                               <div class="main-title">
-                                {{__('site.pay_method_3')}}
+                                {{translatePhrase('pay_method_3')}}
                               </div>
                           </div>
                       </div>
-                      <div class="col-pay">
+                      @endif
+                     {{--   <div class="col-pay JEEL_We">
                           <div class="pay-card text-center">
                               <div class="icon">
                                   <img src="{{ asset('front-assets/images/we-icon.svg')}}" alt="">
                               </div>
                               <div class="main-title">
-                                {{__('site.pay_method_4')}}
+                                {{translatePhrase('pay_method_4')}}
                               </div>
                           </div>
                       </div>
-                      <div class="col-pay">
+                       <div class="col-pay JEEL_Etisalat">
                           <div class="pay-card text-center">
                               <div class="icon">
                                   <img src="{{ asset('front-assets/images/etisalat-icon.svg')}}" alt="">
                               </div>
                               <div class="main-title">
-                                {{__('site.pay_method_5')}}
+                                {{translatePhrase('pay_method_5')}}
                               </div>
                           </div>
-                      </div>
+                      </div> --}}
                   </div>
               </div>
           </div>
@@ -819,9 +820,9 @@
               <div class="row">
                   <div class="col-md-6">
                       <div class="title__section">
-                          <div class="subhead text-primarydark mb-2"><span> {{__('site.comunicate_with_us')}}</span></div>
-                          <div class="head text-primary mb-3">{{__('site.wish_communicate')}}</div>
-                          <h4> {{__('site.please_in')}}</h4>
+                          <div class="subhead text-primarydark mb-2"><span> {{translatePhrase('comunicate_with_us')}}</span></div>
+                          <div class="head text-primary mb-3">{{translatePhrase('wish_communicate')}}</div>
+                          <h4> {{translatePhrase('please_in')}}</h4>
                       </div>
                       <div class="social-links my-4">
                           <ul class="d-flex align-items-center">
@@ -896,15 +897,15 @@
                       <form class="row form-contact"  id="contactForm">
                         @csrf
                           <div class="col-sm-6 mb-3">
-                              <label class="form-label"> {{__('site.name')}} </label>
-                              <input type="text" name="name" id="name" class="form-control" placeholder="{{__('site.enter_name')}}">
+                              <label class="form-label"> {{translatePhrase('name')}} </label>
+                              <input type="text" name="name" id="name" class="form-control" placeholder="{{translatePhrase('enter_name')}}">
                           </div>
                           <div class="col-sm-6 mb-3">
-                              <label class="form-label">{{__('site.email')}} </label>
+                              <label class="form-label">{{translatePhrase('email')}} </label>
                               <input type="email" name="email" id="email" class="form-control" placeholder=" example@gmail.com ">
                           </div>
                           <div class="col-sm-6 mb-3">
-                              <label class="form-label">{{__('site.phone')}}</label>
+                              <label class="form-label">{{translatePhrase('phone')}}</label>
                               <div class="input-group tel mb-3">
                                   <input type="phone" id="phone" name="phone" class="form-control" placeholder=" 0123456789 ">
 
@@ -916,26 +917,26 @@
                               </div>
                           </div>
                           <div class="col-sm-6 mb-3">
-                              <label class="form-label"> {{__('site.reason')}}</label>
+                              <label class="form-label"> {{translatePhrase('reason')}}</label>
                               <select class="form-select" required name="reason" id="reason">
-                                  <option value="" disabled="disabled" selected="selected"{{__('site.enter_name')}}</option>
+                                  <option value="" disabled="disabled" selected="selected"{{translatePhrase('enter_name')}}</option>
                                   <option value="1">One</option>
                                   <option value="2">Two</option>
                               </select>
                           </div>
                           <div class="col-12 mb-3">
-                              <label class="form-label"> {{__('site.write_msg')}}  </label>
-                              <textarea class="form-control" placeholder=" {{__('site.write_msg_here')}}" rows="7"  name="msg" id="msg"></textarea>
+                              <label class="form-label"> {{translatePhrase('write_msg')}}  </label>
+                              <textarea class="form-control" placeholder=" {{translatePhrase('write_msg_here')}}" rows="7"  name="msg" id="msg"></textarea>
                           </div>
                           <div class="col-12 mb-3">
-                              <button class="btn btn-primary w-100" onclick="send_contact(event)">  {{__('site.send_msg')}} </button>
+                              <button class="btn btn-primary w-100" onclick="send_contact(event)">  {{translatePhrase('send_msg')}} </button>
                           </div>
                       </form>
                   </div>
                   <div class="col-md-6">
                       <div class="contact-info d-flex justify-content-center align-items-center">
                           <div class="content">
-                              <h2 class="mb-5">{{__('site.comunicate_info')}}</h2>
+                              <h2 class="mb-5">{{translatePhrase('comunicate_info')}}</h2>
                               <ul>
                                 @if($social->facebook!='')
                                   <li>

@@ -6,14 +6,14 @@
 <section class="page-contact py-page">
   <div class="container-xl">
       <div class="title__section text-primary mb-section text-center">
-          <span class="head"> {{__('site.comunicate_with_us')}}  </span>
+          <span class="head"> {{translatePhrase('comunicate_with_us')}}  </span>
       </div>
       <div class="row justify-content-between">
           <div class="col-md-6">
               <div class="title__section">
-                  <div class="subhead text-primarydark mb-2"><span>  {{__('site.comunicate_with_us')}}</span></div>
-                  <div class="head text-primary mb-3">{{__('site.wish_communicate')}}</div>
-                  <h4>  {{__('site.please_in')}}</h4>
+                  <div class="subhead text-primarydark mb-2"><span>  {{translatePhrase('comunicate_with_us')}}</span></div>
+                  <div class="head text-primary mb-3">{{translatePhrase('wish_communicate')}}</div>
+                  <h4>  {{translatePhrase('please_in')}}</h4>
               </div>
               <div class="social-links my-4">
                   <ul class="d-flex align-items-center">
@@ -89,15 +89,15 @@
               <form class="row form-contact"  id="contactForm">
                 @csrf
                   <div class="col-sm-6 mb-3">
-                      <label class="form-label"> {{__('site.name')}} </label>
-                      <input type="text" name="name" id="name" class="form-control" placeholder="{{__('site.enter_name')}}">
+                      <label class="form-label"> {{translatePhrase('name')}} </label>
+                      <input type="text" name="name" id="name" class="form-control" placeholder="{{translatePhrase('enter_name')}}">
                   </div>
                   <div class="col-sm-6 mb-3">
-                      <label class="form-label">{{__('site.email')}}  </label>
+                      <label class="form-label">{{translatePhrase('email')}}  </label>
                       <input type="email"  name="email" id="email" class="form-control" placeholder=" example@gmail.com ">
                   </div>
                   <div class="col-sm-6 mb-3">
-                      <label class="form-label"> {{__('site.phone')}}   </label>
+                      <label class="form-label"> {{translatePhrase('phone')}}   </label>
                       <div class="input-group tel mb-3">
                           <input type="phone"  id="phone" name="phone"  class="form-control" placeholder=" 0123456789 ">
 
@@ -109,26 +109,26 @@
                       </div>
                   </div>
                   <div class="col-sm-6 mb-3">
-                      <label class="form-label"> {{__('site.reason')}}  </label>
+                      <label class="form-label"> {{translatePhrase('reason')}}  </label>
                       <select class="form-select" required name="reason" id="reason">
-                          <option value="" disabled="disabled" selected="selected">{{__('site.enter_name')}}   </option>
+                          <option value="" disabled="disabled" selected="selected">{{translatePhrase('enter_name')}}   </option>
                           <option value="1">One</option>
                           <option value="2">Two</option>
                       </select>
                   </div>
                   <div class="col-12 mb-3">
-                      <label class="form-label">  {{__('site.write_msg')}}  </label>
-                      <textarea class="form-control" name="msg" id="msg" placeholder=" {{__('site.write_msg_here')}}  " rows="7"></textarea>
+                      <label class="form-label">  {{translatePhrase('write_msg')}}  </label>
+                      <textarea class="form-control" name="msg" id="msg" placeholder=" {{translatePhrase('write_msg_here')}}  " rows="7"></textarea>
                   </div>
                   <div class="col-12 mb-3">
-                      <button class="btn btn-primary w-100" onclick="send_contact(event)">  {{__('site.send_msg')}} </button>
+                      <button class="btn btn-primary w-100" onclick="send_contact(event)">  {{translatePhrase('send_msg')}} </button>
                   </div>
               </form>
           </div>
           <div class="col-md-6 col-xl-auto">
               <div class="contact-info d-inline-flex justify-content-center align-items-center">
                   <div class="content">
-                      <div class="head mb-5">{{__('site.comunicate_info')}}  </div>
+                      <div class="head mb-5">{{translatePhrase('comunicate_info')}}  </div>
                       <ul>
 
                         @if($social->facebook!='')

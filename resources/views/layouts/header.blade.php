@@ -19,12 +19,12 @@
                     </svg>
                 </div>
                 <ul>
-                    <li><a href="{{url(app()->getLocale().'/Aboutus')}}">  {{ __('site.About_jeel') }}  </a></li>
-                    <li><a href="{{url(app()->getLocale().'/Download')}}">{{ __('site.download') }} </a></li>
-                    <li><a href="{{url(app()->getLocale().'/FAQS')}}">{{ __('site.faq_questions') }}</a></li>
-                    <li><a href="{{url(app()->getLocale().'/Jeel-questions')}}"> {{ __('site.jeel_questions') }}</a></li>
-                    <li><a href="javascript:void(0)"> {{ __('site.blog') }}</a></li>
-                    <li><a href="{{url(app()->getLocale().'/Contact-us')}}"> {{ __('site.contact_us') }}</a></li>
+                    <li><a href="{{url(app()->getLocale().'/Aboutus')}}"> {{translatePhrase('About_jeel')}} </a></li>
+                    <li><a href="{{url(app()->getLocale().'/Download')}}">{{ translatePhrase('download') }} </a></li>
+                   {{--  <li><a href="{{url(app()->getLocale().'/FAQS')}}">{{ translatePhrase('faq_questions') }}</a></li>
+                    <li><a href="{{url(app()->getLocale().'/Jeel-questions')}}"> {{ translatePhrase('jeel_questions') }}</a></li> --}}
+                    <li><a href="javascript:void(0)"> {{ translatePhrase('blog') }}</a></li>
+                    <li><a href="{{url(app()->getLocale().'/Contact-us')}}"> {{ translatePhrase('contact_us') }}</a></li>
                 </ul>
             </div>
             <div class="sub-lang">
@@ -37,7 +37,7 @@
                         <li class="dropdown-item"><a href="{{ url('/en')  }}"><span class="lang-ico">  En  </span> English</a> </li>
                     </ul>
                 </div>
-                <button class="btn btn-join"> {{ __('site.joinNow') }}</button>
+                <button class="btn btn-join"> {{ translatePhrase('joinNow') }}</button>
             </div>
         </div>
     </div>

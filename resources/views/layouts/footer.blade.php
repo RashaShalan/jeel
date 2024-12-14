@@ -9,19 +9,24 @@
               <ul class="pages-links">
                   <li>
                       <a href="{{url(app()->getLocale().'/Aboutus')}}">
-                        {{ __('site.About_jeel') }}
+                        {{ translatePhrase('About_jeel') }}
                       </a>
                   </li>
                   <li>
                       <a href="{{url(app()->getLocale().'/Contact-us')}}">
-                        {{ __('site.contact_us') }}
+                        {{ translatePhrase('contact_us') }}
                       </a>
                   </li>
                   <li>
                       <a href="{{url(app()->getLocale().'/FAQS')}}">
-                        {{ __('site.faq_questions') }}
+                        {{ translatePhrase('faq_questions') }}
                       </a>
                   </li>
+                  <li>
+                    <a href="{{url(app()->getLocale().'/Terms-and-conditions')}}">
+                      {{ translatePhrase('terms_and_usage') }}
+                    </a>
+                </li>
               </ul>
               <div class="social-links my-4">
                   <ul class="d-flex align-items-center">
@@ -147,4 +152,19 @@
 
 
 
-</div></footer>
+</div>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/67542ecd2480f5b4f5a985b1/1iegddlg9';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+</footer>
+
