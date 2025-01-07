@@ -619,7 +619,7 @@
       </section>
       <!--==============================End CTA Section ==============================-->
       <!--==============================Start Testimonial Section ==============================-->
-      <section class="testimonial-section mb-section py-section" style="display: none;">
+   {{--    <section class="testimonial-section mb-section py-section" style="display: none;">
           <div class="container-xl">
               <div class="row">
                   <div class="title__section text-center">
@@ -653,7 +653,7 @@
               </div>
           </div>
 
-      </section>
+      </section> --}}
       <!--==============================End Testimonial Section ==============================-->
       <!--==============================Start Pricing Section ==============================-->
       <section class="pricing-section mb-section py-section">
