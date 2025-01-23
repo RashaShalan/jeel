@@ -57,11 +57,15 @@
         @csrf
         <div class="card-body demo-vertical-spacing demo-only-element">
           <div class="form-floating form-floating-outline mb-4">
-            <input type="text" class="form-control" id="title_ar" name="title_ar" placeholder="Title in Arabic" />
-            <label for="title_ar">Title in Arabic</label>
+{{--             <input type="text" class="form-control" id="title_ar" name="title_ar" placeholder="Title in Arabic" />
+ --}}
+       <textarea class="form-control h-px-100" id="title_ar" name="title_ar" placeholder="Title in Arabic"></textarea>
+     <label for="title_ar">Title in Arabic</label>
           </div>
           <div class="form-floating form-floating-outline mb-4">
-            <input type="text" class="form-control" id="title_en" name="title_en" placeholder="Title in English" />
+{{--             <input type="text" class="form-control" id="title_en" name="title_en" placeholder="Title in English" />
+ --}}
+ <textarea class="form-control h-px-100" id="title_en" name="title_en" placeholder="Title in English"></textarea>
             <label for="title_en">Title in English</label>
           </div>
 

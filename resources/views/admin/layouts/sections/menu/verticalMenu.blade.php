@@ -54,6 +54,40 @@
 
     </li>
     <li class="menu-item ">
+      <a href="{{ url(app()->getLocale() .'/dashboard/campaign') }}" class= "menu-link" >
+
+        <i class="menu-icon tf-icons mdi mdi-account-outline"></i>
+
+        <div>Campaign</div>
+
+      </a>
+
+
+    </li>
+    <li class="menu-item ">
+      <a href="{{ url(app()->getLocale() .'/dashboard/faq') }}" class= "menu-link" >
+
+        <i class="menu-icon tf-icons mdi mdi-account-outline"></i>
+
+        <div>FAQs</div>
+
+      </a>
+
+
+    </li>
+    <li class="menu-item ">
+      <a href="{{ url(app()->getLocale() .'/dashboard/jeel_questions') }}" class= "menu-link" >
+
+        <i class="menu-icon tf-icons mdi mdi-account-outline"></i>
+
+        <div>Jeel questions</div>
+
+      </a>
+
+
+    </li>
+
+    <li class="menu-item ">
       <a href="{{ url(app()->getLocale() .'/dashboard/translate') }}" class= "menu-link" >
 
         <i class="menu-icon tf-icons mdi mdi-account-outline"></i>

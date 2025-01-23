@@ -21,9 +21,9 @@
                 <ul>
                     <li><a href="{{url(app()->getLocale().'/Aboutus')}}"> {{translatePhrase('About_jeel')}} </a></li>
                     <li><a href="{{url(app()->getLocale().'/Download')}}">{{ translatePhrase('download') }} </a></li>
-                   {{--  <li><a href="{{url(app()->getLocale().'/FAQS')}}">{{ translatePhrase('faq_questions') }}</a></li>
-                    <li><a href="{{url(app()->getLocale().'/Jeel-questions')}}"> {{ translatePhrase('jeel_questions') }}</a></li> --}}
-                    <li><a href="javascript:void(0)"> {{ translatePhrase('blog') }}</a></li>
+                    <li><a href="{{url(app()->getLocale().'/FAQS')}}">{{ translatePhrase('faq_questions') }}</a></li>
+                    <li><a href="{{url(app()->getLocale().'/Jeel-questions')}}"> {{ translatePhrase('jeel_questions') }}</a></li>
+                     {{--<li><a href="javascript:void(0)"> {{ translatePhrase('blog') }}</a></li>--}}
                     <li><a href="{{url(app()->getLocale().'/Contact-us')}}"> {{ translatePhrase('contact_us') }}</a></li>
                 </ul>
             </div>

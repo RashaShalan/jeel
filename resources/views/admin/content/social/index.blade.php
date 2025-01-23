@@ -30,16 +30,16 @@
           <label for="facebook">Facebook</label>
         </div>
         <div class="form-floating form-floating-outline mb-4">
-          <input type="text" class="form-control" id="twitter" name="twitter" placeholder="Twitter" value="{{$social->twitter}}" />
-          <label for="twitter">Twitter</label>
+          <input type="text" class="form-control" id="instagram" name="instagram" placeholder="Instagram" value="{{$social->instagram}}" />
+          <label for="twitter">Instagram</label>
         </div>
         <div class="form-floating form-floating-outline mb-4">
           <input type="text" class="form-control" id="whatsapp" name="whatsapp" placeholder="Whatsapp" value="{{$social->whatsapp}}" />
           <label for="whatsapp">Whatsapp</label>
         </div>
         <div class="form-floating form-floating-outline mb-4">
-          <input type="text" class="form-control" id="gmail" name="gmail" placeholder="Gmail" value="{{$social->gmail}}" />
-          <label for="gmail">Gmail</label>
+          <input type="text" class="form-control" id="tiktok" name="tiktok" placeholder="Tiktok" value="{{$social->tiktok}}" />
+          <label for="tiktok">Tiktok</label>
         </div>
         <div class="form-floating form-floating-outline mb-4">
           <input type="text" class="form-control" id="linkedin" name="linkedin" placeholder="Linkedin"  value="{{$social->linkedin}}"/>

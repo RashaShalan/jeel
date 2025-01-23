@@ -21,6 +21,22 @@
                 }
             });
 
+
+            const photoEn = $("#image_en");
+            let file;
+            photoEn.change(function (e) {
+                file = this.files[0];
+                console.log(file)
+                if (file) {
+                    let reader = new FileReader();
+                    reader.onload = function (event) {
+                        $("#imgEnPreview")
+                            .attr("src", event.target.result);
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
   });
 </script>
 @endsection
@@ -68,13 +84,44 @@
           <textarea class="form-control h-px-100" id="desc_en" name="desc_en" placeholder="Description in English...">{{$slider->desc_en}}</textarea>
           <label for="desc_en">Description in English</label>
         </div>
+       {{--  <div class="form-floating form-floating-outline mb-4">
+          <input type="text" class="form-control" id="subscribe_link" name="subscribe_link" placeholder="Subscribe Link" value="{{$slider->subscribe_link}}" />
+          <label for="subscribe_link">Subscribe link</label>
+        </div>
+        <div class="form-floating form-floating-outline mb-4">
+          <select class="form-select" id="subscribe_link_type" name="subscribe_link_type" aria-label="Link type">
+            <option value="inner" @if($slider->subscribe_link_type=='inner') selected @endif>Inner Link</option>
+            <option value="outer"  @if($slider->subscribe_link_type=='outer') selected @endif>Outer link</option>
+          </select>
+          <label for="subscribe_link_type">Link type</label>
+        </div>
+
+        <div class="form-floating form-floating-outline mb-4">
+          <input type="text" class="form-control" id="download_link" name="download_link" placeholder="Download Link" value="{{$slider->download_link}}" />
+          <label for="download_link">Download link</label>
+        </div>
+        <div class="form-floating form-floating-outline mb-4">
+          <select class="form-select" id="download_link_type" name="download_link_type" aria-label="Link type">
+            <option value="inner" @if($slider->download_link_type=='inner') selected @endif>Inner Link</option>
+            <option value="outer"  @if($slider->download_link_type=='outer') selected @endif>Outer link</option>
+          </select>
+          <label for="download_link_type">Link type</label>
+        </div>
+ --}}
         <div class="mb-3">
-          <label for="formFile" class="form-label">Image</label>
+          <label for="formFile" class="form-label">Image Ar</label>
           <input class="form-control" name="image" type="file" id="image">
 
         </div>
         <div id="preview">
-          <img src="{{$slider->image}}" id="imgPreview" />
+          <img src="{{$slider->image_ar}}" id="imgPreview" />
+        </div>
+        <div class="mb-3">
+          <label for="formFile" class="form-label">Image En</label>
+          <input class="form-control" name="image_en" type="file" id="image_en">
+        </div>
+        <div id="preview">
+          <img src="{{$slider->image_en}}" id="imgEnPreview" />
         </div>
         <button class="btn btn-primary d-grid w-100">Save</button>
 

@@ -91,12 +91,19 @@ class SliderController extends Controller
     $slider->title_en = $request->title_en;
     $slider->desc_ar = $request->desc_ar;
     $slider->desc_en = $request->desc_en;
+   /*  $slider->subscribe_link = $request->subscribe_link;
+    $slider->subscribe_link_type = $request->subscribe_link_type;
+    $slider->download_link = $request->download_link;
+    $slider->download_link_type = $request->download_link_type; */
     $slider->created_by = Auth::user()->id;
     $slider->created_at = now();
 
     $slider->save();
     if ($request->hasFile('image')) {
-      UploadFiles('uploads/slider', 'image', $slider, $request->image);
+      UploadFiles('uploads/slider', 'image_ar', $slider, $request->image);
+    }
+    if ($request->hasFile('image_en')) {
+      UploadFiles('uploads/slider', 'image_en', $slider, $request->image_en);
     }
     if (!empty($slider)) {
       return redirect()
@@ -172,12 +179,19 @@ class SliderController extends Controller
     $slider->title_en = $request->title_en;
     $slider->desc_ar = $request->desc_ar;
     $slider->desc_en = $request->desc_en;
+  /*   $slider->subscribe_link = $request->subscribe_link;
+    $slider->subscribe_link_type = $request->subscribe_link_type;
+    $slider->download_link = $request->download_link;
+    $slider->download_link_type = $request->download_link_type; */
     $slider->updated_by = Auth::user()->id;
     $slider->updated_at = now();
 
     $slider->save();
     if ($request->hasFile('image')) {
-      UploadFiles('uploads/slider', 'image', $slider, $request->image);
+      UploadFiles('uploads/slider', 'image_ar', $slider, $request->image);
+    }
+    if ($request->hasFile('image_en')) {
+      UploadFiles('uploads/slider', 'image_en', $slider, $request->image_en);
     }
     if (!empty($slider)) {
       return redirect()

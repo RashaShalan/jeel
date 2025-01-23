@@ -10,6 +10,9 @@ use App\Http\Controllers\admin\authentications\ForgotPasswordBasic;
 use App\Http\Controllers\admin\SliderController;
 use App\Http\Controllers\admin\SocialController;
 use App\Http\Controllers\admin\translateController;
+use App\Http\Controllers\admin\CampaignController;
+use App\Http\Controllers\admin\faqsController;
+use App\Http\Controllers\admin\jeel_questionsController;
 
 Route::prefix('{locale?}')
   ->middleware('setLocale')
@@ -22,6 +25,13 @@ Route::prefix('{locale?}')
     Route::get('/Contact-us', [HomeController::class, 'contact_us'])->name('Contact_us');
     Route::post('/send_contact', [HomeController::class, 'send_contact_us'])->name('send_contact');
     Route::get('/Terms-and-conditions', [HomeController::class, 'terms_conditions'])->name('Terms-and-conditions');
+    Route::get('/campaign', [HomeController::class, 'campagin'])->name('campagin');
+    Route::post('/send_contactCampagin', [HomeController::class, 'contact_usCamagin'])->name('send_contact_campagin');
+    Route::post('/send_contactCampagin', [HomeController::class, 'contact_usCamagin'])->name('send_contact_campagin');
+    Route::get('/Disclaimer_of_Liability', [HomeController::class, 'Liability'])->name('Disclaimer_of_Liability');
+    Route::get('/Parental_Consent_Notice', [HomeController::class, 'Parental_Consent'])->name('Parental_Consent_Notice');
+    Route::get('/Intellectual_Property_Notice', [HomeController::class, 'Intellectual_Property'])->name('Intellectual_Property_Notice');
+
 
     /**
      * Dasnboard
@@ -63,6 +73,45 @@ Route::prefix('{locale?}')
         Route::post('/translate/update', [translateController::class, 'update']);
         Route::any('/translate/delete', [translateController::class, 'destroy']);
         Route::any('/translate/getData', [translateController::class, 'getDataInfo'])->name('translate.getData');
+
+        /**Campagin */
+        Route::any('/campaign', [CampaignController::class, 'index']);
+
+        Route::any('/campaign/create', [CampaignController::class, 'create']);
+
+        Route::any('/campaign/add', [CampaignController::class, 'store']);
+        Route::any('/campaign/get', [CampaignController::class, 'show']);
+        Route::get('/campaign/edit', [CampaignController::class, 'edit']);
+
+        Route::post('/campaign/update', [CampaignController::class, 'update']);
+        Route::any('/campaign/delete', [CampaignController::class, 'destroy']);
+        Route::any('/campaign/getData', [CampaignController::class, 'getDataInfo'])->name('campaign.getData');
+
+        /**faqs */
+        Route::any('/faq', [faqsController::class, 'index']);
+
+        Route::any('/faq/create', [faqsController::class, 'create']);
+
+        Route::any('/faq/add', [faqsController::class, 'store']);
+        Route::any('/faq/get', [faqsController::class, 'show']);
+        Route::get('/faq/edit', [faqsController::class, 'edit']);
+
+        Route::post('/faq/update', [faqsController::class, 'update']);
+        Route::any('/faq/delete', [faqsController::class, 'destroy']);
+        Route::any('/faq/getData', [faqsController::class, 'getDataInfo'])->name('faq.getData');
+
+        /**Jeel Questions */
+        Route::any('/jeel_questions', [jeel_questionsController::class, 'index']);
+
+        Route::any('/jeel_questions/create', [jeel_questionsController::class, 'create']);
+
+        Route::any('/jeel_questions/add', [jeel_questionsController::class, 'store']);
+        Route::any('/jeel_questions/get', [jeel_questionsController::class, 'show']);
+        Route::get('/jeel_questions/edit', [jeel_questionsController::class, 'edit']);
+
+        Route::post('/jeel_questions/update', [jeel_questionsController::class, 'update']);
+        Route::any('/jeel_questions/delete', [jeel_questionsController::class, 'destroy']);
+        Route::any('/jeel_questions/getData', [jeel_questionsController::class, 'getDataInfo'])->name('jeel_questions.getData');
       }
     );
 

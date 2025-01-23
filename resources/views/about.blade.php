@@ -520,7 +520,7 @@
       </section>
       <!--==============================End Testimonial Section ==============================-->
       <!--==============================Start CTA Section ==============================-->
-      <section class="cta-section mb-section py-section">
+      <section class="cta-section mb-section py-section" id="downloadsection">
         <div class="container-xl">
           <div class="row">
             <div class="cta-wrapper d-flex align-items-center justify-content-center">
@@ -675,7 +675,7 @@
       </section>
       <!--==============================end Ecommerce-Product ==============================-->
       <!--==============================Start Contact Section ==============================-->
-      <section class="contact-section mb-section py-section">
+      <section class="contact-section mb-section py-section" id="joinsection">
         <div class="container-xl">
           <div class="row">
             <div class="col-md-6">

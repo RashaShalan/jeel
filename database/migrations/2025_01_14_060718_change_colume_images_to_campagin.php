@@ -1,0 +1,45 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::table('campigns', function (Blueprint $table) {
+            //
+           /*  $table->dropColumn('main_image');
+            $table->dropColumn('sub_image'); */
+
+      $table
+        ->string('main_image')
+        ->nullable()
+        ->after('main_details_en')->change();
+
+    $table
+        ->string('sub_image')
+        ->nullable()
+        ->after('sub_details_en')->change();
+
+    $table
+    ->string('name_en')
+    ->after('name_ar')->change();
+    });
+
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::table('campign', function (Blueprint $table) {
+            //
+        });
+    }
+};

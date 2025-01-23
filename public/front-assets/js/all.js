@@ -12833,6 +12833,14 @@ Jeelapp.initialize = function ()
 jQuery(document).ready(function ()
 {
   Jeelapp.initialize();
+  $(".join-btn").click(function ()
+  {
+    $('html, body').scrollTop($("#joinsection").offset().top);
+  });
+  $(".download-btn").click(function ()
+  {
+    $('html, body').scrollTop($("#downloadsection").offset().top);
+  });
 });
 lightGallery(document.getElementById('video-about'), {
   plugins: [lgVideo],
@@ -14970,7 +14978,7 @@ function (_Emitter) {
 
       fileReader.readAsDataURL(file);
     } // `mockFile` needs to have these attributes:
-    // 
+    //
     //     { name: 'name', size: 12345, imageUrl: '' }
     //
     // `callback` will be invoked when the image has been downloaded and displayed.
@@ -18024,7 +18032,7 @@ function __guardMethod__(obj, methodName, transform) {
                         }
                     }
                     var $cSouter = $slide.parent();
-                    $cSouter.find('.lSPager').html(pagers); 
+                    $cSouter.find('.lSPager').html(pagers);
                     if (settings.gallery === true) {
                         if (settings.vertical === true) {
                             // set Gallery thumbnail width
@@ -18097,7 +18105,7 @@ function __guardMethod__(obj, methodName, transform) {
                         setCss();
                         if (!interval) {
                             $this.auto();
-                        }   
+                        }
                     }else{
                         obj.find('img').on('load', function () {
                             setTimeout(function () {
@@ -18523,7 +18531,7 @@ function __guardMethod__(obj, methodName, transform) {
                 $(window).on('focus', function(){
                     $this.auto();
                 });
-                
+
                 $(window).on('blur', function(){
                     clearInterval(interval);
                 });
@@ -18726,7 +18734,7 @@ function __guardMethod__(obj, methodName, transform) {
                 }
             }
             return sc + 1;
-        }; 
+        };
         $el.getTotalSlideCount = function () {
             return $slide.find('.lslide').length;
         };
@@ -18751,7 +18759,7 @@ function __guardMethod__(obj, methodName, transform) {
                 $el.refresh = function(){};
                 $el.getCurrentSlideCount = function(){};
                 $el.getTotalSlideCount = function(){};
-                $el.goToSlide = function(){}; 
+                $el.goToSlide = function(){};
                 $el.lightSlider = null;
                 refresh = {
                     init : function(){}

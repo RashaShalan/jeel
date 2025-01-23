@@ -43,6 +43,8 @@ class SocialController extends Controller
       $slider->gmail = $request->gmail ?? '';
       $slider->whatsapp = $request->whatsapp ?? '';
       $slider->linkedin = $request->linkedin ?? '';
+      $slider->instagram = $request->instagram ?? '';
+      $slider->tiktok = $request->tiktok ?? '';
 
       // $slider->created_by = Auth::user()->id;
       $slider->created_at = now();
@@ -55,7 +57,8 @@ class SocialController extends Controller
       $slider->gmail = $request->gmail ?? '';
       $slider->whatsapp = $request->whatsapp ?? '';
       $slider->linkedin = $request->linkedin ?? '';
-
+      $slider->instagram = $request->instagram ?? '';
+      $slider->tiktok = $request->tiktok ?? '';
       // $slider->updated_by = Auth::user()->id;
       $slider->updated_at = now();
       $slider->save();

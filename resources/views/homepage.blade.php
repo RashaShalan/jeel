@@ -5,7 +5,7 @@
 @section('content')
             <!--==============================Start Hero Section ==============================-->
 
-            <section class="home_banner">
+            <section class="home_banner mb-section">
               <div class="banner_slider slider" dir="{{__('site.class')}}">
                 @foreach($sliders as $slider)
                   <div class="slide">
@@ -16,20 +16,17 @@
                           <div class="container-xl">
                               <div class="left-section">
                                   <div class="head">
-                                    @if(app()->getLocale()=='ar')
-                                    {!! $slider->title_ar!!}
-                                    @else {!! $slider->title_en!!}
-                                    @endif
+
+                                    {!! $slider->title!!}
+
                                </div>
                                   <p>
-                                    @if(app()->getLocale()=='ar')
-                                    {!!$slider->desc_ar!!}
-                                    @else   {!!$slider->desc_en!!}
-                                    @endif
+                                    {!!$slider->desc!!}
+
                                   </p>
                                   <div class="action">
-                                      <button class="btn btn-primary">{{translatePhrase('joinNow')}}</button>
-                                      <button class="btn btn-outlineprimary">{{translatePhrase('download_app')}}</button>
+                                      <button class="btn btn-primary join-btn" id="" >{{translatePhrase('joinNow')}}</button>
+                                      <button class="btn btn-outlineprimary download-btn" id="">{{translatePhrase('download_app')}}</button>
                                   </div>
                               </div>
                           </div>
@@ -564,7 +561,7 @@
       </section>
       <!--==============================End Features Parent Section ==============================-->
       <!--==============================Start CTA Section ==============================-->
-      <section class="cta-section mb-section py-section">
+      <section class="cta-section mb-section py-section" id="downloadsection">
           <div class="container-xl">
               <div class="row">
                   <div class="cta-wrapper d-flex align-items-center justify-content-center">
@@ -673,14 +670,18 @@
                       <div class="col">
                           <div class="card-price weekly">
                               <div class="icon">
-                                  <img src="{{ asset('front-assets/images/pricing-icon.svg')}}" alt="">
+                                  <img src="{{ asset('front-assets/images/payment_icons/weekly.svg')}}" alt="">
                               </div>
                               <div class="main-title">
                                   <h2>{{translatePhrase('weekly_subsc')}}</h2>
                                   <p>{{translatePhrase('best_package')}}</p>
                               </div>
                               <div class="price">
+                                @if (Cookie::get('weekly') !== null)
+                                <span> {{ Cookie::get('weekly') }}</span>
+                                @else
                                   <span>649.99 ج.م</span>
+                                  @endif
                               </div>
                               <div class="action">
                                   <button class="btn">
@@ -695,14 +696,18 @@
                       <div class="col">
                           <div class="card-price monthly">
                               <div class="icon">
-                                  <img src="{{ asset('front-assets/images/pricing-icon.svg')}}" alt="">
+                                  <img src="{{ asset('front-assets/images/payment_icons/monthly.svg')}}" alt="">
                               </div>
                               <div class="main-title">
                                   <h2> {{translatePhrase('monthly_subsc')}}</h2>
                                   <p>{{translatePhrase('best_package')}}</p>
                               </div>
                               <div class="price">
+                                @if (Cookie::get('monthly') !== null)
+                                <span> {{ Cookie::get('monthly') }}</span>
+                                @else
                                   <span>649.99 ج.م</span>
+                                  @endif
                               </div>
                               <div class="action">
                                   <button class="btn">
@@ -717,14 +722,18 @@
                       <div class="col">
                           <div class="card-price annualy">
                               <div class="icon">
-                                  <img src="{{ asset('front-assets/images/pricing-icon.svg')}}" alt="">
+                                  <img src="{{ asset('front-assets/images/payment_icons/yearly.svg')}}" alt="">
                               </div>
                               <div class="main-title">
                                   <h2> {{translatePhrase('annual_subsc')}}</h2>
                                   <p>{{translatePhrase('best_package')}}</p>
                               </div>
                               <div class="price">
+                                @if (Cookie::get('annualy') !== null)
+                                <span> {{ Cookie::get('annualy') }}</span>
+                                @else
                                   <span>649.99 ج.م</span>
+                                  @endif
                               </div>
                               <div class="action">
                                   <button class="btn">
@@ -755,8 +764,8 @@
                       </div>
                   </div>
                   <div class="row flex-wrap justify-content-center">
-
-                   {{--     <div class="col-pay E-WALLET">
+                    @if(Cookie::get('countryName')=='Egypt')
+                       <div class="col-pay E-WALLET">
                           <div class="pay-card text-center">
                               <div class="icon">
                                   <img src="{{ asset('front-assets/images/ewallet-icon.svg')}}" alt="">
@@ -765,8 +774,19 @@
                                  {{translatePhrase('pay_method_1')}}
                               </div>
                           </div>
-                      </div> --}}
-
+                      </div>
+                      @else
+                      <div class="col-pay E-WALLET" style="visibility: hidden">
+                        <div class="pay-card text-center">
+                            <div class="icon">
+                                <img src="{{ asset('front-assets/images/ewallet-icon.svg')}}" alt="">
+                            </div>
+                            <div class="main-title">
+                               {{translatePhrase('pay_method_1')}}
+                            </div>
+                        </div>
+                    </div>
+                    @endif
                       <div class="col-pay mastercard">
                           <div class="pay-card text-center">
                               <div class="icon">
@@ -788,6 +808,17 @@
                               </div>
                           </div>
                       </div>
+                      @else
+                      <div class="col-pay FAWRY" style="visiblity:hidden;">
+                        <div class="pay-card text-center">
+                            <div class="icon">
+                                <img src="{{ asset('front-assets/images/fawry-icon.svg')}}" alt="">
+                            </div>
+                            <div class="main-title">
+                              {{translatePhrase('pay_method_3')}}
+                            </div>
+                        </div>
+                    </div>
                       @endif
                      {{--   <div class="col-pay JEEL_We">
                           <div class="pay-card text-center">
@@ -815,7 +846,7 @@
       </section>
       <!--==============================End Pricing Section ==============================-->
       <!--==============================Start Contact Section ==============================-->
-      <section class="contact-section mb-section py-section">
+      <section class="contact-section mb-section py-section" id="joinsection">
           <div class="container-xl">
               <div class="row">
                   <div class="col-md-6">
