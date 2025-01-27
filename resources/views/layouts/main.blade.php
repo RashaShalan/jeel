@@ -68,6 +68,7 @@ const options = {
         enableHighAccuracy: true, // enable high accuracy
         timeout: 300000, // wait for 5 minutes
     };
+    var countryName='EGYPT'; var countryCode='EG';
 
     function success(position) {
         console.log(position);
@@ -79,18 +80,15 @@ const options = {
           console.log(response);
             console.log(response.city, response.country);
         }, "jsonp"); */
+
         $.get('http://api.geonames.org/countryCodeJSON?lat='+ coords.latitude+'&lng='+coords.longitude+'&username=rootgeo',function(response)
         {
             console.log(response);
-            var countryName; var countryCode;
             if(response.countryName)
            {
             countryName=response.countryName;
             countryCode=response.countryCode;
-          }else{
-            countryName='EGYPT';
-            countryCode='EG';
-            }
+          }
             setCookie('countryName',countryName,7);
             setCookie('countryCode',countryCode,7);
             $('.col-pay').fadeOut('fast');
@@ -114,7 +112,7 @@ const options = {
             }
 
 
-            $.get('https://jeelpay.com/api/getPackagePriceAndPaymentMethodByCountry?Country_Code='+response.countryCode,function(data)
+            $.get('https://jeelpay.com/api/getPackagePriceAndPaymentMethodByCountry?Country_Code='+countryCode,function(data)
             {
               var payMethod=data.paymentPayingMethods;
               var currency='{{translatePhrase('USD')}}';
@@ -147,9 +145,69 @@ const options = {
 
             });
 
-        });
-    }
+        }) .fail(function() {
 
+
+  });
+    }
+    function getPrices()
+    {
+         setCookie('countryName',countryName,7);
+            setCookie('countryCode',countryCode,7);
+            $('.col-pay').fadeOut('fast');
+
+            if(countryCode=='EG'){
+              $('.FAWRY').fadeIn('fast')
+              $('.mastercard').fadeIn('fast')
+              $('.E-WALLET').fadeIn('fast')
+
+              setCookie('pay1','FAWRY',7);
+              setCookie('pay2','mastercard',7);
+              setCookie('pay3','E-WALLET',7);
+
+            }else if(countryCode=='SA')
+            {
+              $('.mastercard').fadeIn('fast')
+              setCookie('pay2','mastercard',7);
+            }else{
+              $('.mastercard').fadeIn('fast')
+              setCookie('pay2','mastercard',7);
+            }
+
+
+            $.get('https://jeelpay.com/api/getPackagePriceAndPaymentMethodByCountry?Country_Code='+countryCode,function(data)
+            {
+              var payMethod=data.paymentPayingMethods;
+              var currency='{{translatePhrase('USD')}}';
+             /*  $('.col-pay').fadeOut('fast');
+              payMethod.forEach(element => {
+                console.log(element.name)
+                $('.'+element.name).fadeIn('fast')
+              }); */
+
+                                    var payment=data.paymentSpecialCountriesOffer;
+
+                console.log(data.paymentPayingMethods)
+                console.log('+++++++++++++++++++++++++++++')
+                console.log(data.paymentSpecialCountriesOffer)
+                console.log('+++++++++++++++++++++++++++++')
+                if(payment.monthBasicPriceConverted.currency=='EGP')
+                {
+                  currency='{{translatePhrase('EGP')}}';
+                }else  if(payment.monthBasicPriceConverted.currency=='SAR')
+                {
+                  currency='{{translatePhrase('SAR')}}';
+                }
+                setCookie('monthly',payment.monthDiscountPriceConverted.convertedPrice+" "+currency,7);
+                setCookie('weekly',payment.weekDiscountPriceConverted.convertedPrice+" "+currency,7);
+                setCookie('annualy',payment.yearDiscountPriceConverted.convertedPrice+" "+currency,7);
+                $('.monthly .price >span').html(payment.monthDiscountPriceConverted.convertedPrice+" "+currency);
+                $('.weekly .price >span').html(payment.weekDiscountPriceConverted.convertedPrice+" "+currency);
+                $('.annualy .price >span').html(payment.yearDiscountPriceConverted.convertedPrice+" "+currency);
+                console.log('=======');
+
+            });
+}
     function error(error) {
         console.log(error);
     }
@@ -160,8 +218,11 @@ const options = {
         options
         );*/
         $().ready(function(){
+
           @if (Cookie::get('annualy') == null)
+          getPrices();
           if (navigator.geolocation) {
+
           navigator.geolocation.getCurrentPosition(success,error,options);
           }
           @endif

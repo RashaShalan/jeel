@@ -22,19 +22,45 @@
             });
 
             const photoEn = $("#image_en");
-            let file;
+            let file2;
             photoEn.change(function (e) {
-                file = this.files[0];
-                console.log(file)
-                if (file) {
+                file2 = this.files[0];
+                console.log(file2)
+                if (file2) {
                     let reader = new FileReader();
                     reader.onload = function (event) {
                         $("#imgEnPreview")
                             .attr("src", event.target.result);
                     };
-                    reader.readAsDataURL(file);
+                    reader.readAsDataURL(file2);
                 }
             });
+
+  });
+  $().ready(function(){
+    $('#subscribe_link_type').change(function(){
+     console.log(this.value)
+     if(this.value=='inner')
+     {
+      $('#subscribe_linkOuter').fadeOut('fast');
+      $('#subscribe_linkInner').fadeIn('fast');
+     }else{
+      $('#subscribe_linkOuter').fadeIn('fast');
+      $('#subscribe_linkInner').fadeOut('fast');
+     }
+    })
+
+    $('#download_link_type').change(function(){
+     console.log(this.value)
+     if(this.value=='inner')
+     {
+      $('#download_linkOuter').fadeOut('fast');
+      $('#download_linkInner').fadeIn('fast');
+     }else{
+      $('#download_linkOuter').fadeIn('fast');
+      $('#download_linkInner').fadeOut('fast');
+     }
+    })
 
   });
 </script>
@@ -81,30 +107,56 @@
           <textarea class="form-control h-px-100" id="desc_en" name="desc_en" placeholder="Description in English..."></textarea>
           <label for="desc_en">Description in English</label>
         </div>
-{{--
         <div class="form-floating form-floating-outline mb-4">
-          <input type="text" class="form-control" id="subscribe_link" name="subscribe_link" placeholder="Subscribe Link" />
+          <input type="text" class="form-control" id="subscribe_text_en" name="subscribe_text_en" placeholder="Subscribe button text in English" value="subscribe" />
+          <label for="subscribe_text_en">Subscribe button text in English</label>
+        </div>
+        <div class="form-floating form-floating-outline mb-4">
+          <input type="text" class="form-control" id="subscribe_text_ar" name="subscribe_text_ar" placeholder="Subscribe button text in Arabic" value="اشتراك" />
+          <label for="subscribe_text_ar">Subscribe button text in Arabic</label>
+        </div>
+          <div class="form-floating form-floating-outline mb-4">
+            <select class="form-select " id="subscribe_link_type" name="subscribe_link_type" aria-label="Link type">
+              <option value="inner">Inner Link</option>
+              <option value="outer">Outer link</option>
+            </select>
+            <label for="subscribe_link_type">Link type</label>
+          </div>
+
+        <div class="form-floating form-floating-outline mb-4">
+          <input type="text" class="form-control" id="subscribe_linkOuter" onchange="$('#subscribe_link').val(this.value)" name="subscribe" placeholder="Subscribe Link" style="display: none" />
+          <select class="form-select " id="subscribe_linkInner" name="subscribe" aria-label="Link type" onchange="$('#subscribe_link').val(this.value)">
+            <option value="#joinsection">join section</option>
+            <option value="#downloadsection">download section</option>
+          </select>
+          <input type="hidden" value="#joinsection" class="form-control" id="subscribe_link" name="subscribe_link" placeholder="Subscribe Link" />
           <label for="subscribe_link">Subscribe link</label>
         </div>
         <div class="form-floating form-floating-outline mb-4">
-          <select class="form-select" id="subscribe_link_type" name="subscribe_link_type" aria-label="Link type">
-            <option value="inner">Inner Link</option>
-            <option value="outer">Outer link</option>
-          </select>
-          <label for="subscribe_link_type">Link type</label>
-        </div>
-
-        <div class="form-floating form-floating-outline mb-4">
-          <input type="text" class="form-control" id="download_link" name="download_link" placeholder="Download Link" />
-          <label for="download_link">Download link</label>
+          <input type="text" class="form-control" id="download_text_en" name="download_text_en" placeholder="Downlad button text in English" value="download" />
+          <label for="download_text_en">Downlaod button text in English</label>
         </div>
         <div class="form-floating form-floating-outline mb-4">
-          <select class="form-select" id="download_link_type" name="download_link_type" aria-label="Link type">
+          <input type="text" class="form-control" id="download_text_ar" name="download_text_ar" placeholder="Downlaod button text in Arabic" value="تحميل" />
+          <label for="download_text_ar">Downlaod button text in Arabic</label>
+        </div>
+        <div class="form-floating form-floating-outline mb-4">
+          <select class="form-select " id="download_link_type" name="download_link_type" aria-label="Link type">
             <option value="inner">Inner Link</option>
             <option value="outer">Outer link</option>
           </select>
           <label for="download_link_type">Link type</label>
-        </div> --}}
+        </div>
+        <div class="form-floating form-floating-outline mb-4">
+          <input type="text" class="form-control" id="download_linkOuter" name="download" onchange="$('#download_link').val(this.value)" placeholder="Subscribe Link" style="display: none" />
+          <select class="form-select " id="download_linkInner" name="download" aria-label="Link type" onchange="$('#download_link').val(this.value)">
+            <option value="#joinsection">join section</option>
+            <option value="#downloadsection">download section</option>
+          </select>
+          <input type="hidden" class="form-control" value="#joinsection" id="download_link" name="download_link" placeholder="Download Link" />
+          <label for="download_link">Download link</label>
+        </div>
+
         <div class="mb-3">
           <label for="formFile" class="form-label">Image Ar</label>
           <input class="form-control" name="image" type="file" id="image">

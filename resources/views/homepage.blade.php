@@ -776,7 +776,7 @@
                           </div>
                       </div>
                       @else
-                      <div class="col-pay E-WALLET" style="visibility: hidden">
+                      <div class="col-pay E-WALLET" style="display: none">
                         <div class="pay-card text-center">
                             <div class="icon">
                                 <img src="{{ asset('front-assets/images/ewallet-icon.svg')}}" alt="">
@@ -809,7 +809,7 @@
                           </div>
                       </div>
                       @else
-                      <div class="col-pay FAWRY" style="visiblity:hidden;">
+                      <div class="col-pay FAWRY" style="display:none;">
                         <div class="pay-card text-center">
                             <div class="icon">
                                 <img src="{{ asset('front-assets/images/fawry-icon.svg')}}" alt="">

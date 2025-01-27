@@ -91,10 +91,14 @@ class SliderController extends Controller
     $slider->title_en = $request->title_en;
     $slider->desc_ar = $request->desc_ar;
     $slider->desc_en = $request->desc_en;
-   /*  $slider->subscribe_link = $request->subscribe_link;
+    $slider->subscribe_text_en = $request->subscribe_text_en;
+    $slider->subscribe_text_ar = $request->subscribe_text_ar;
+     $slider->subscribe_link = $request->subscribe_link;
     $slider->subscribe_link_type = $request->subscribe_link_type;
+    $slider->download_text_en = $request->download_text_en;
+    $slider->download_text_ar = $request->download_text_ar;
     $slider->download_link = $request->download_link;
-    $slider->download_link_type = $request->download_link_type; */
+    $slider->download_link_type = $request->download_link_type;
     $slider->created_by = Auth::user()->id;
     $slider->created_at = now();
 
@@ -179,10 +183,14 @@ class SliderController extends Controller
     $slider->title_en = $request->title_en;
     $slider->desc_ar = $request->desc_ar;
     $slider->desc_en = $request->desc_en;
-  /*   $slider->subscribe_link = $request->subscribe_link;
+    $slider->subscribe_text_en = $request->subscribe_text_en;
+    $slider->subscribe_text_ar = $request->subscribe_text_ar;
+     $slider->subscribe_link = $request->subscribe_link;
     $slider->subscribe_link_type = $request->subscribe_link_type;
+    $slider->download_text_en = $request->download_text_en;
+    $slider->download_text_ar = $request->download_text_ar;
     $slider->download_link = $request->download_link;
-    $slider->download_link_type = $request->download_link_type; */
+    $slider->download_link_type = $request->download_link_type;
     $slider->updated_by = Auth::user()->id;
     $slider->updated_at = now();
 
